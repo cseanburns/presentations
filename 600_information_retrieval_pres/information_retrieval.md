@@ -11,8 +11,8 @@ Introduction
 
 - What follows is a brief introduction to information retrieval. The concepts
   presented here are presented discretely, but in practice there is quite a 
-  bit of overlap, and other issues, some very complicated, are at play, too.
-- I will also present a couple of toy models of information retrieval. This means
+  bit of overlap, and other issues are at play, too.
+- I will also present a couple of toy information retrieval models. This means
   that I've removed many important details so that we can direct our full attention
   to some basic IR concepts and mechanisms.
 
@@ -43,7 +43,7 @@ Information Retrieval Indexes
 # Searching against an index
 
 - All search engines and database systems search against an index and not against
-  the actual documents or surrogate records (e.g., bibliographic records).
+  the actual documents or the surrogate records (e.g., bibliographic records).
 - For example, Google does not re-search every single web page on the entire internet
   each time someone enters a query in Google; rather, queries are searched against a stored index,
   albeit one that Google is constantly building and modifying based on the
@@ -54,10 +54,11 @@ Full Text Search
 
 # Full text search: the contents of a document
 
-- If we searching in a system that indexes the full text, then we are
+- If we search in a system that indexes the full text, then we are
   searching against all the language in that text
 - This is useful to know because when we construct queries, it might be helpful
   to imagine how langauge is used
+- It also means that we may retrieve documents that do not exactly match our query
 - Example: web pages and sites, full text databases
 
 Surrogate Records Search
@@ -65,10 +66,10 @@ Surrogate Records Search
 
 # Surrogate records search: the bibliographic description of a document
 
-- However, if we are searching a system that contains document surrogates, then
-  we are searching against pre-set fields of information about the documents.
-  These pre-set fields are displayed in surrogate records, and they contain 
-  what's called descriptive and access metadata about the documents of interest.
+- If we search a system that contains document surrogates, or representations of 
+  those documents, then we search against pre-set fields of information about the documents.
+  These pre-set fields compose surrogate records, and they contain 
+  what is called descriptive and access metadata about the documents of interest.
   This is information about the documents and information about how to access
   the documents.
 - Examples: author names, titles, subject headings in an online catalog
@@ -87,83 +88,107 @@ Searching Against the Index
   structured simply because the surrogates are fixed and designed. Oftentimes,
   there will also be rules about how they are written.
   
-Toy Example 1: Term Frequency - Inverse Document Frequency
+Toy Model 1: Full Text Search
 ========================================================
 
-Let's take a look at our toy models. In the first model, imagine that we've done
-a simple search on some popular search engine using a single term. Let's say our
-term is "librarian".
+# Our first toy model
 
-Toy Example 1: Searching a Full Text System
+- In the first model, we begin by examining full text search.
+- Imagine that we've entered a simple search query into some popular search
+  engine using a single term. If it helps, imagine our search term is *librarian*.
+- By setting up a toy model (i.e., an oversimplified model), we can start to acquire
+  an intuition of how information retrieval works.
+
+Toy Model 1: Aboutness 
 ========================================================
 
-When all documents are the same size, the rank order is simply based on the
-rank number of keywords per documentdf
+# Aboutness
+
+- It seems obvious that if I searched for a term, then I would want results to 
+  documents (e.g., web pages, etc.) that contain my term.
+- As a result, we might assume that how or how often a term is used in a document
+  must say something about what that document is about. Therefore, we connect 
+  the idea of *aboutness* of a document to the appearance of terms in a document.
+- Ex: if a document contains the word *librarian*, then we might guess that the
+  document is about librarians and we might become more confident in our guess
+  the more that word appears in that document.
+- Consequently, if a document has a word count of 500 and the term *librarian* appears
+  in that document 10 times, then we might likely say that the document is more *about*
+  librarians than a document with also a word count of 500 but where the term *librarian*
+  only appears two times.
+  
+Toy Model 1: Term Frequency - Inverse Document Frequency
+========================================================
+
+# tf-idf
+
+- Therefore, one way to measure the importance of a term in a document is to measure the 
+  frequency of that term in a document
+- Let's imagine that entire web only contains ten documents.
+- Let's also imagine that each document contains the exact same number of words
+  (n = 100).
+- Under this scenario, when all documents are of equal length, then the rank order
+  of search results is simply a function of the frequency of the search term 
+  in each document: i.e., the more a term appears in the document, the higher its rank,
+  or its relevance.
+
+Toy Model 1: Searching a Full Text System
+========================================================
+
+## Demonstration 
 
 
-```r
-docid <- seq(1,10)
-
-set.seed(1000)
-tf    <- sample(0:9, replace=TRUE)
-
-wc    <- rep(100, 10)
-tfn   <- tf/wc
-idf   <- log(length(docid) / length(tf[tf > 0]))
-tfidf <- round(tfn * idf, 4)
-
-tfidf.df <- data.frame(cbind(docid, tf, wc, tfn, idf, tfidf))
-tfidf.df[order(-tfidf),]
 ```
-
-```
-   docid tf  wc  tfn       idf  tfidf
-2      2  7 100 0.07 0.1053605 0.0074
-7      7  7 100 0.07 0.1053605 0.0074
-4      4  6 100 0.06 0.1053605 0.0063
-5      5  5 100 0.05 0.1053605 0.0053
-8      8  5 100 0.05 0.1053605 0.0053
-1      1  3 100 0.03 0.1053605 0.0032
-9      9  2 100 0.02 0.1053605 0.0021
-10    10  2 100 0.02 0.1053605 0.0021
-3      3  1 100 0.01 0.1053605 0.0011
-6      6  0 100 0.00 0.1053605 0.0000
+   docid term.freq word.count term.freq.norm inv.doc.freq   rank
+2      2         7        100           0.07    0.1053605 0.0074
+7      7         7        100           0.07    0.1053605 0.0074
+4      4         6        100           0.06    0.1053605 0.0063
+5      5         5        100           0.05    0.1053605 0.0053
+8      8         5        100           0.05    0.1053605 0.0053
+1      1         3        100           0.03    0.1053605 0.0032
+9      9         2        100           0.02    0.1053605 0.0021
+10    10         2        100           0.02    0.1053605 0.0021
+3      3         1        100           0.01    0.1053605 0.0011
+6      6         0        100           0.00    0.1053605 0.0000
 ```
 
 Toy Example 2: Searching a Full Text System
 ========================================================
 
+## Explanation
+
+- It's not realistic to assume that each document in a set will contain the
+  exact word count, even in our toy model.
+- This is where the second part of the *tf-idf* algorithm helps 
+- The *idf* considers the presence and the lack of presence of a keyword within
+  the entire set of or collection of documents so that the keyword within the documents
+  will remain effective as the size of the collection changes over time (gets 
+  bigger or smaller).
+- Imagine, for example, a collection of 100 documents. If only five of those documents
+  contains the term *psychology*, then a search amongst those documents for that
+  term can be effective. However, if all 100 documents contained that term, then
+  the term is no longer effective as a search term. 
+
+Toy Example 2: Searching a Full Text System
+========================================================
+
+## Demonstration 
+
 When documents differ in length, then the rank order varies based on tf*idf score
 
 
-```r
-docid <- seq(1,10)
-
-set.seed(1000)
-tf    <- sample(0:9, replace=TRUE)
-
-set.seed(1000)
-wc    <- sample.int(sample(100:1000), replace=FALSE, 10)
-tfn   <- tf/wc
-idf   <- log(length(docid) / length(tf[tf > 0]))
-tfidf <- round(tfn * idf, 4)
-
-tfidf.df <- data.frame(cbind(docid, tf, wc, tfn, idf, tfidf))
-tfidf.df[order(-tfidf),]
 ```
-
-```
-   docid tf  wc         tfn       idf  tfidf
-1      1  3  41 0.073170732 0.1053605 0.0077
-7      7  7 138 0.050724638 0.1053605 0.0053
-5      5  5 124 0.040322581 0.1053605 0.0042
-9      9  2  71 0.028169014 0.1053605 0.0030
-8      8  5 183 0.027322404 0.1053605 0.0029
-2      2  7 279 0.025089606 0.1053605 0.0026
-4      4  6 249 0.024096386 0.1053605 0.0025
-10    10  2 256 0.007812500 0.1053605 0.0008
-3      3  1 231 0.004329004 0.1053605 0.0005
-6      6  0 247 0.000000000 0.1053605 0.0000
+   docid term.freq word.count term.freq.norm inv.doc.freq   rank
+1      1         3         41    0.073170732    0.1053605 0.0077
+7      7         7        138    0.050724638    0.1053605 0.0053
+5      5         5        124    0.040322581    0.1053605 0.0042
+9      9         2         71    0.028169014    0.1053605 0.0030
+8      8         5        183    0.027322404    0.1053605 0.0029
+2      2         7        279    0.025089606    0.1053605 0.0026
+4      4         6        249    0.024096386    0.1053605 0.0025
+10    10         2        256    0.007812500    0.1053605 0.0008
+3      3         1        231    0.004329004    0.1053605 0.0005
+6      6         0        247    0.000000000    0.1053605 0.0000
 ```
 
 Toy Example 3: Searching a Surrogate Record System
