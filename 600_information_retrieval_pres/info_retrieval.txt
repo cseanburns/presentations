@@ -1,0 +1,116 @@
+  I. Everything is a document
+    A. Search systems are built based on the nature of the documents searched
+
+  II. Searching for documents is either searching systems that index
+    A. The complete document
+      1. Full text
+        a. Ex: web pages
+        b. Ex: full text journal articles
+    B. Document surrogates (information/knowledge organization)
+      1. MARC records in a library / online catalog
+        a. Ex: author names
+        b. Ex: titles
+        c. Ex: subject headings
+      2. A&I databases
+        a. Ex: keywords, abstracts, etc.
+        b. Ex: bibliographic fields (authors, titles, publication dates, etc.)
+
+ III. Searching is searching against some index
+    A. document surrogates --> structured-based indexes
+      1. indexes are built based on interlinking document surrogates
+        a. Ex: a collection of MARC records in an online catalog
+    B. full text --> unstructured-based indexes
+      1. indexes are build based on an algorithm that analyzes the text
+        a. Ex: frequent words in a text signal a text's *aboutness*
+        b. Ex: tf*idf or, term frequency * inverse document frequency
+
+
+# When all documents are the same size, the rank order is simply based on the
+# rank number of keywords per document
+
+docid <- seq(1,10)
+set.seed(1000)
+tf    <- sample(0:9, replace=TRUE)
+wc    <- rep(100, 10)
+tfn   <- tf/wc
+idf   <- log(length(docid) / length(tf[tf > 0]))
+tfidf <- round(tfn * idf, 4)
+tfidf.df <- data.frame(cbind(docid, tf, wc, tfn, idf, tfidf))
+tfidf.df[order(-tfidf),]
+
+# When documents differ in length, then the rank order varies based on t
+docid <- seq(1,10)
+set.seed(1000)
+tf    <- sample(0:9, replace=TRUE)
+set.seed(1000)
+wc    <- sample.int(sample(100:1000), replace=FALSE, 10)
+tfn   <- tf/wc
+idf   <- log(length(docid) / length(tf[tf > 0]))
+tfidf <- round(tfn * idf, 4)
+tfidf.df <- data.frame(cbind(docid, tf, wc, tfn, idf, tfidf))
+tfidf.df[order(-tfidf),]
+
+
+# Boolean searching
+
+library(dplyr)
+
+cats <- rep("cat", 10)
+dogs <- rep("dog", 10)
+snakes <- rep("snake", 10)
+
+set.seed(1)
+one <- sample(c(cats, dogs, snakes), 10)
+set.seed(2)
+two <- sample(c(cats, dogs, snakes), 10)
+set.seed(3)
+three <- sample(c(cats, dogs, snakes), 10)
+
+docid <- seq(1,10)
+cds <- data.frame(cbind(docid, one, two, three))
+
+# retrieve all records that contain cat in first column
+cds
+filter(cds, one == "cat")
+
+# retrieve all records that do not contain cat in the first column
+cds
+filter(cds, one != "cat")
+
+# Boolean AND: More terms reduces the results
+cds
+filter(cds, two == "dog")
+filter(cds, two == "dog" & three == "cat")
+
+# Boolean NOT: retrieve all records that contain dog in first and second columns 
+# but not the third column
+cds
+filter(cds, one == "dog" & two == "dog" & three != "dog")
+
+# Boolean OR: captures more
+cds
+filter(cds, two == "dog" | three == "cat")
+filter(cds, two == "dog" | three == "cat" & one != "snake")
+
+
+# Why is "snake" appearing in this list? Because order of operation matters.
+# Note what happens when I add parentheses -- the order of operation stands out.
+
+# these two are the same search, because order of operation matters
+filter(cds, two == "dog" | three == "cat" & one != "snake")
+filter(cds, one != "snake" & (two == "dog" | three == "cat"))
+
+# these two are the same search, because order of operation matters
+filter(cds, one != "snake" & two == "dog" | three == "cat")
+filter(cds, (one != "snake" & two == "dog") | three == "cat")
+
+
+# notes:
+
+1. instead of 'cats' docs talk about felines, tabbies, etc. and instead of 
+'dogs', docs talk about sshnauzers, etc. So introduce controlled vocabulary, 
+thesauri, synonyms, etc because we may mean cats but documents refer to 
+different but related terms.
+
+2. notice that the docid order is always the same -- boolean search simply 
+reduces listwise and doesn't re-sort by rank order.
