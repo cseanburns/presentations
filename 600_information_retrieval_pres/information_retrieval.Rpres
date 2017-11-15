@@ -77,8 +77,8 @@ Information Retrieval Indexes
 Full Text Search: Contents
 ========================================================
 
-- If we search in a system that indexes the full text, then we are
-  searching against all the language in that text
+- If we search in a system that indexes the full text, then we 
+  search against all the language in that text
 - This is useful to know because when we construct queries, it might be helpful
   to imagine how language is used in the documents that build the index
 - It also means that we may retrieve documents that do not exactly match our query, 
@@ -383,7 +383,7 @@ Toy Example 3: Boolean, OR > AND
 ========================================================
 
 As you develop your intuition about how these searches work, you will quickly
-begin to understand why Boolean *OR* captures more records than Boolean *AND* 
+begin to understand why Boolean *OR* searches capture more records than Boolean *AND* 
 searches:
 
 ```{r}
@@ -439,6 +439,10 @@ Conclusion
   searchers but also better evaluators of search products
 
 Question: feel free to reach out to me at sean.burns@uky.edu
+
+Source code to the slides:
+
+https://github.com/cseanburns/presentations/tree/master/600_information_retrieval_pres
 
 ***
 
