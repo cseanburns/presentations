@@ -66,7 +66,7 @@ of the web.
 - If we take a close look, we can see that `floridahealth.gov` is further
   subdivided by Florida counties. E.g.: `flu site:orange.floridahealth.gov`.
 
-![The Organization of Web](google-search-spence-web-org.png "Organization of Web")
+![The Organization of Web](google-search-web-org.png "Organization of Web")
 
 ## Constructing queries for precise results
 
