@@ -1,5 +1,7 @@
 # Plotting in R
 
+In this tutorial, I primarily cover base-R plot functions.
+
 I used different data, but the examples here are built on those provided by
 [STHDA][1].
 
@@ -201,8 +203,20 @@ plotmeans(education$X1 ~ education$RegionName, connect = FALSE)
 dev.off()
 ```
 
+## See Also
+
+[ggplot2][2] is a powerful and popular graphing library for R.
+
+It's also possible to create spatial/map plots. I created the following two:
+
+- A map of [USDA Obesity and Diabetes Rates by US Census Region][3]
+- A map of [Texas Death Row][4] statistics
+
 ## References
 
 See [STHDA][1] for many more fine examples plus some other plotting libraries.
 
 [1]:http://www.sthda.com/english/wiki/r-base-graphs
+[2]:https://ggplot2.tidyverse.org/
+[3]:https://rpubs.com/seancsb/52342
+[4]:https://rpubs.com/seancsb/6832
