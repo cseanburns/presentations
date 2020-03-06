@@ -64,7 +64,7 @@ plot(education$X1, education$Y,
      xlab = "Residents per 1000 in Urban Areas",
      ylab = "Per capita Expenditure on Public Education",
      main = "Relationship Between Expenditure on Public Ed and Urban Pop")
-lines(lowess(education$Y ~ education$X1), col = "blue")
+lines(lowess(education$Y ~ education$X1), col = "red")
 ```
 
 ### Scatterplots
@@ -143,6 +143,7 @@ From the ``bigcity`` data set. ``u`` is the population of 49 U.S. cities in 1920
 ```
 library(boot)
 head(bigcity)
+plot(bigcity$u, type = "b", col = "blue", pch = 18)
 plot(sort(bigcity$u), type = "b", col = "blue", pch = 18)
 lines(sort(bigcity$x), type = "b", col = "red", pch = 19)
 legend("topleft", legend = c("1920", "1930"),
@@ -165,7 +166,7 @@ pie(tapply(education$Y, education$RegionName, FUN = mean),
 hist(education$X1)
 hist(education$X1, col = "red")
 hist(education$X1, col = "#1565c0")
-hist(education$X1, col = "#1565c0", breaks = 5)
+hist(education$X1, col = "#1565c0", breaks = 3)
 ```
 
 ### Density Plots
@@ -186,6 +187,7 @@ dotchart(education$X1, labels = education$State,
 
 ```
 library(gplots)
+library(psych)
 plotmeans(education$X1 ~ education$RegionName)
 plotmeans(education$X1 ~ education$RegionName, mean.labels = TRUE)
 plotmeans(education$X1 ~ education$RegionName, connect = FALSE)
