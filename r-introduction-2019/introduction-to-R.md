@@ -329,8 +329,8 @@ current working directory and/or change it:
 
 ```
 getwd()
-setwd('/home/sean/workspace/project1') # e.g., Linux
-setwd('/Users/sean/workspace/project1') # e.g., macOS
+setwd('/home/user/workspace/project1') # e.g., Linux
+setwd('/Users/user/workspace/project1') # e.g., macOS
 setwd('C://file/path') # e.g., Windows
 ```
 
@@ -444,7 +444,7 @@ But you may want to save your data to something like a CSV file, especially if
 you've organized and cleaned it up for analysis. To do so:
 
 ```
-write.table(beaver1, file = "/home/sean/beaver1.csv", sep = ",", quote = TRUE)
+write.table(beaver1, file = "beaver1.csv", sep = ",", quote = TRUE)
 ```
 
 **Note 1**: The ``beaver1`` and ``beaver1`` datasets are provided with **base R**. 
