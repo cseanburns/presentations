@@ -11,9 +11,9 @@ stat [query]**, and that's worked well for me.
 But R also has builtin in help/documentation/examples. To get help on a command
 or function, use the question mark followed by the name of a function or
 library, or use two question marks to search for a topic. In the example that
-follows, I am pulling up the specific documentation for the ``lm`` function. In
+follows, I am pulling up the specific documentation for the `lm` function. In
 the second statement, I'm searching the documentation for the term
-``chisquare``.
+`chisquare`.
 
 ```
 ?lm
@@ -30,13 +30,13 @@ manuals, books, and an academic journal dedicated to R. See:
 R includes base libraries (functions and data) in the default install. These
 are called **Base R** or **R Base**. A comprehensive list of these packages are
 on the web at the link below, and the links to each package on that site
-retrieve the same documentation that you access when you use the ``?`` commands
+retrieve the same documentation that you access when you use the `?` commands
 above:
 
 [https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html][3]
 
 Eventually you will want to to install additional libraries to add
-functionality. To do so, use the following command, and replace ``package``
+functionality. To do so, use the following command, and replace `package`
 with the name of the package to install:
 
 ```
@@ -44,7 +44,7 @@ install.packages("package")
 ```
 
 Once installed, to load a package into the workspace so that you can use it,
-you use the ``library`` command:
+you use the `library` command:
 
 ```
 library("package")
@@ -74,7 +74,7 @@ personal preferences. [Atom][4] is a popular, cross-platform text editor that
 has good integration with [Git][7] / [GitHub][5]. GitHub is a site to manage
 and store code. It's also a popular place to find additional R packages.
 
-When writing in a text editor, use the ``#`` to write comments to document what
+When writing in a text editor, use the `#` to write comments to document what
 you're doing along the way. For example, here is an example comment followed by
 a short mathematical statement:
 
@@ -115,15 +115,15 @@ For more details (and attribution for quotes), see: [An Introduction to R][8]
 
 A R vector may include data of different **classes**, such as numeric,
 character, and logical. Vectors may also include missing data, which are
-indicated by ``NA``. 
+indicated by `NA`. 
 
-In the statemenst below, I use the ``<-`` to make an assignment. It assigns the
+In the statemenst below, I use the `<-` to make an assignment. It assigns the
 values on the right side of the statement to the variable name on the left side
 of the statement. Thus, in the first statement below, we declare the variable
-``x`` to hold the value ``1``, and the variable ``y`` to hold multiple values
-from ``1`` to ``4``, inclusive. Sometimes you'll see examples where the equal
-sign ``=`` is used instead of the ``<-`` for assignment. It's a matter of
-preference, but ``<-`` helps to distinguish assignment operations from other
+`x` to hold the value `1`, and the variable `y` to hold multiple values
+from `1` to `4`, inclusive. Sometimes you'll see examples where the equal
+sign `=` is used instead of the `<-` for assignment. It's a matter of
+preference, but `<-` helps to distinguish assignment operations from other
 operations where the equal sign has a different use.
 
 
@@ -153,7 +153,8 @@ unordered or ordered. Whether factors need to be ordered depends on the
 research and data, of course. For example, we don't order **female** or
 **male**, but we may order grade levels.
 
-Data is not necessarily in the desired class when entered into R, and we use the ``class`` function to see how data is classed and then change it if needed:
+Data is not necessarily in the desired class when entered into R, and we use
+the `class` function to see how data is classed and then change it if needed:
 
 **unordered:**
 
@@ -183,9 +184,9 @@ table(grades)
 We can import data from spreadsheets, CSV files, etc, but sometimes we create
 data by combining separate vectors. For illustration, let's create two vectors:
 
-- ``x`` will be a numeric vector that contains 20 elements, normally
+- `x` will be a numeric vector that contains 20 elements, normally
   distributed with a mean of 83, and a *sd* of 3.0.
-- ``y`` will be a logical vector, TRUE if greater than 83, FALSE if less than
+- `y` will be a logical vector, TRUE if greater than 83, FALSE if less than
   83
 
 ```
@@ -206,13 +207,13 @@ plot(z$y, z$x) # same as above
 
 **Note 1:** R often uses formula notation/syntax:
 
-- ``response variable ~ predictor variable``, or:
-- ``dependent variable ~ independent variable``, or:
-- ``y ~ x``
+- `response variable ~ predictor variable`, or:
+- `dependent variable ~ independent variable`, or:
+- `y ~ x`
 
 **Note 2:** The dollar sign is used to refer to a variable in a data frame
-(think of a column in a spreadsheet). Above, ``x`` is a variable (of any
-length) in the ``z`` data frame.
+(think of a column in a spreadsheet). Above, `x` is a variable (of any
+length) in the `z` data frame.
 
 **Note 3:** To retrieve a specific element in a data frame, use the square
 brackets and the index for both row and column:
@@ -322,7 +323,7 @@ boxplot(health$Height ~ health$Gender)
 **Note 1**: When reading data from the file system, it helps if the data is
 located in the same part of the file system (i.e., folder) that you used to
 start R. Otherwise, you need to specify the path to the data in the
-``read.table`` (and similar commands). Specifying the path is OS-dependent.
+`read.table` (and similar commands). Specifying the path is OS-dependent.
 
 To get the location of your working directory. If you would like see the
 current working directory and/or change it:
@@ -336,8 +337,8 @@ setwd('C://file/path') # e.g., Windows
 
 ### Linear Regression
 
-Linear regression statements take the form of ``model <- lm(DV ~ IV)`` or
-``model <- lm(y ~ x)``, where "model" is simply the name you choose to refer to
+Linear regression statements take the form of `model <- lm(DV ~ IV)` or
+`model <- lm(y ~ x)`, where "model" is simply the name you choose to refer to
 the model.
 
 ```
@@ -352,7 +353,7 @@ confint(fit)
 anova(fit)
 ```
 
-**Note 1:** ``cars`` is a data set that is part of **base R**.
+**Note 1:** `cars` is a data set that is part of **base R**.
 
 ### Pearson's Chi-squared test for count data
 
@@ -447,7 +448,7 @@ you've organized and cleaned it up for analysis. To do so:
 write.table(beaver1, file = "beaver1.csv", sep = ",", quote = TRUE)
 ```
 
-**Note 1**: The ``beaver1`` and ``beaver1`` datasets are provided with **base R**. 
+**Note 1**: The `beaver1` and `beaver1` datasets are provided with **base R**. 
 
 ## Reading data
 

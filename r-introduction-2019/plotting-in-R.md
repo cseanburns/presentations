@@ -9,7 +9,9 @@ I used different data, but the examples here are built on those provided by
 
 ### Plot
 
-The ``plot()`` function is the most basic plot and is often used to plot line or point plots. The syntax is ``plot(x,y)`` but also includes arguments for modifying the plot. Examples:
+The `plot()` function is the most basic plot and is often used to plot line or
+point plots. The syntax is `plot(x,y)` but also includes arguments for
+modifying the plot. Examples:
 
 **Basic Plot**
 
@@ -29,7 +31,7 @@ head(education)
 
 **Adding Labels**
 
-Variables include (from ``?education``):
+Variables include (from `?education`):
 
 - 'State' State
 - 'Region' Region (1=Northeastern, 2=North central, 3=Southern, 4=Western)
@@ -86,7 +88,7 @@ scatterplot(education$Y ~ education$X1 | education$RegionName)
 
 **Scatterplot Matrices**
 
-Here's we'll compare the four numerical variables by specifying their column numbers. We can define the kind of points the plot creates with the ``pch`` argument. See ``?points`` for options.
+Here's we'll compare the four numerical variables by specifying their column numbers. We can define the kind of points the plot creates with the `pch` argument. See `?points` for options.
 
 ```
 pairs(education[,3:6], pch = 20)
@@ -114,7 +116,8 @@ stripchart(education$Y ~ education$RegionName, vertical = TRUE,
 
 ### Bar Plots
 
-Bar plot does not aggregrate by default. Therefore I use the ``table`` command to aggregate the counts:
+Bar plot does not aggregrate by default. Therefore I use the `table` command to
+aggregate the counts:
 
 ```
 barplot(education$Region)
@@ -125,7 +128,8 @@ barplot(table(education$RegionName),
         col = c("red", "blue", "green", "orange"))
 ```
 
-To create a legend with this data requires some hacking. To compare, in the second call, I use the ``unique`` function to get unique values:
+To create a legend with this data requires some hacking. To compare, in the
+second call, I use the `unique` function to get unique values:
 
 ```
 barplot(table(education$RegionName),
@@ -138,7 +142,9 @@ barplot(table(education$RegionName),
 
 ### Multiple Lines
 
-From the ``bigcity`` data set. ``u`` is the population of 49 U.S. cities in 1920. ``x`` is the the population of these cities in 1930. I'm simply sorting these to provide the example.
+From the `bigcity` data set. `u` is the population of 49 U.S. cities in 1920.
+`x` is the the population of these cities in 1930. I'm simply sorting these to
+provide the example.
 
 ```
 library(boot)
@@ -152,7 +158,8 @@ legend("topleft", legend = c("1920", "1930"),
 
 ### Pie Chart
 
-We need to aggregate the data for a pie chart. For this, I'll use the ``tapply`` function to take the mean of the ``Y`` variable for each ``RegionName``.
+We need to aggregate the data for a pie chart. For this, I'll use the `tapply`
+function to take the mean of the `Y` variable for each `RegionName`.
 
 ```
 pie(tapply(education$Y, education$RegionName, FUN = mean))
