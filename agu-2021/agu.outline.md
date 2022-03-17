@@ -1,0 +1,15 @@
+- State of affairs
+    - diversity in science
+    - exclusion (and aggression) in science
+    - inequity in science
+- Open Science is about the workflow
+    - it says nothing about DEI
+- The closest model is Open Source software development
+    - which can be antagonistic toward DEI
+    - what we learn from the Open Source world and other efforts that promote DEI is that promoting DEI is not as simple as making things more diverse -- that other efforts are necessary
+- In pursuit of this, and whether science or open science, we can think more broadly, as scientists, about our:
+    - culture
+    - societies
+- If we think about the cultures and societies that scientists create for themselves, then we can get imaginative about the evidence we seek to foster culture and create societies that promote DEI
+- In that regard, I would like to refer to a line of research from political science
+    - Some have argued that social capital is correlated with various negative developments in society. Robert Putnam, for example, has shown that social capital has detoriated since the 1960s
