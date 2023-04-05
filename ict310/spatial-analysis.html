@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Sean Burns, PhD, Associate Professor" />
+  <meta name="date" content="2023-04-06" />
+  <title>An Introduction to Spatial Analysis</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">An Introduction to Spatial Analysis</h1>
+  <p class="author">
+Sean Burns, PhD, Associate Professor
+  </p>
+  <p class="date">April 6, 2023</p>
+</div>
+<div id="prolegomenon-spatial-analysis-and-mapping-techniques-in-gaming"
+class="slide section level2">
+<h1>Prolegomenon: Spatial Analysis and Mapping Techniques in Gaming</h1>
+<p>Spatial analysis and mapping techniques are used in the production of
+video games to create realistic and immersive game environments.</p>
+</div>
+<div id="god-of-war-ragnarök" class="slide section level2">
+<h1>God Of War Ragnarök</h1>
+<div class="figure">
+<img src="files/god_of_war.png" alt="" />
+<p class="caption">God of War Ragnarök</p>
+</div>
+<p>Source: <a href="https://mapgenie.io/">Map Genie</a></p>
+</div>
+<div id="south-park-the-stick-of-truth" class="slide section level2">
+<h1>South Park: The Stick of Truth</h1>
+<div class="figure">
+<img src="files/south_park.png" alt="" />
+<p class="caption">South Park: The Stick of Truth</p>
+</div>
+<p>Source: <a href="https://mapgenie.io/">Map Genie</a></p>
+</div>
+<div id="outline-of-spatial-analysis-talk" class="slide section level2">
+<h1>Outline of Spatial Analysis Talk</h1>
+<ul>
+<li>Map components</li>
+<li>Spatial memory recall and its importance in daily life</li>
+<li>Spatial analysis techniques and their applications</li>
+<li>Introduction to GIS spatial analysis</li>
+</ul>
+</div>
+<div id="maps-key-components" class="slide section level2">
+<h1>Maps: Key components</h1>
+<p>The basic components of a map include:</p>
+<ul>
+<li>Title</li>
+<li>Legend</li>
+<li>Scale</li>
+<li>Orientation</li>
+<li>Data Source</li>
+<li>Projection</li>
+<li>Grid</li>
+</ul>
+</div>
+<div id="maps-example" class="slide section level2">
+<h1>Maps: Example</h1>
+<div class="figure">
+<img src="files/Fayette.png" alt="" />
+<p class="caption">Fayette County</p>
+</div>
+<p>Source: <a
+href="https://transportation.ky.gov/Planning/SPRS%20Maps/Fayette.pdf">KY
+Dept. of Transportation</a></p>
+</div>
+<div id="map-projections-cylindrical-projections"
+class="slide section level2">
+<h1>Map Projections: Cylindrical Projections</h1>
+<div class="figure">
+<img src="files/mercator_projection.jpg" alt="" />
+<p class="caption">Mercator Projection</p>
+</div>
+<!-- Aids navigation; distorts nearer the poles -->
+<p>Source: <a
+href="https://en.wikipedia.org/wiki/Mercator_projection">Wikipedia:
+Mercator Projection</a></p>
+</div>
+<div id="map-projections-pseudocynlindrical-projections"
+class="slide section level2">
+<h1>Map Projections: Pseudocynlindrical Projections</h1>
+<div class="figure">
+<img src="files/robinson_projection.jpg" alt="" />
+<p class="caption">Robinson Projection</p>
+</div>
+<!-- Aids visualization; distorts nearer the poles -->
+<p>Source: <a
+href="https://en.wikipedia.org/wiki/Robinson_projection">Wikipedia:
+Robinson Projection</a></p>
+</div>
+<div id="map-projections-conic-projections"
+class="slide section level2">
+<h1>Map Projections: Conic Projections</h1>
+<div class="figure">
+<img src="files/lambert.jpg" alt="" />
+<p class="caption">Lambert Conformal Conic Projection</p>
+</div>
+<p>Source: <a
+href="https://en.wikipedia.org/wiki/Lambert_conformal_conic_projection">Wikipedia:
+Lambert Conformal Conic Projection</a></p>
+<!-- used in aviation charts -->
+</div>
+<div id="map-projections-azimuthal-projections"
+class="slide section level2">
+<h1>Map Projections: Azimuthal Projections</h1>
+<div class="figure">
+<img src="files/gpp.jpg" alt="" />
+<p class="caption">General Perspective Projection</p>
+</div>
+<p>Source: <a
+href="https://en.wikipedia.org/wiki/General_Perspective_projection">Wikipedia:
+General Perspective Projection</a></p>
+<!-- a type of camera view: from a perspective -->
+</div>
+<div id="spatial-memory-recall" class="slide section level2">
+<h1>Spatial Memory Recall</h1>
+<p>Spatial memory recall refers to the ability to remember and navigate
+through a physical space. It involves the brain’s ability to encode,
+store, and retrieve information about the spatial layout of our
+environment.</p>
+</div>
+<div id="spatial-analysis" class="slide section level2">
+<h1>Spatial Analysis</h1>
+<p>Spatial analysis is a set of techniques used to analyze and
+understand spatial data.</p>
+</div>
+<div id="spatial-data" class="slide section level2">
+<h1>Spatial Data</h1>
+<p>Spatial data refers to any data that has a geographic or spatial
+component, such as location or distance.</p>
+</div>
+<div id="spatial-analysis-techniques" class="slide section level2">
+<h1>Spatial Analysis Techniques</h1>
+<p>Spatial analysis techniques allow us to explore, visualize, and
+analyze this type of data to identify patterns and relationships that
+may not be apparent through other forms of analysis.</p>
+</div>
+<div id="common-applications" class="slide section level2">
+<h1>Common Applications</h1>
+<ul>
+<li>Geographic Information Systems (GIS)</li>
+<li>Spatial statistics</li>
+<li>Spatial modeling</li>
+<li>Remote sensing</li>
+<li>Spatial data visualization</li>
+<li>Spatial decision-making</li>
+</ul>
+</div>
+<div id="spatial-analysis-techniques-gis-demonstration"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: GIS Demonstration</h1>
+<ul>
+<li>GIS software (such as ArcGIS or QGIS)</li>
+<li>Data for a city (such as roads, buildings, and other infrastructure)
+<ul>
+<li>GIS files needed
+<ul>
+<li><strong>Vector data layer:</strong> This is the layer that contains
+the features you want to buffer, such as roads, buildings, or points of
+interest. The vector data layer should be in a file format that is
+compatible with QGIS, such as Shapefile (.shp), GeoJSON (.json), or KML
+(.kml).</li>
+<li><strong>Attribute table:</strong> The attribute table is a
+spreadsheet that contains information about the features or events in
+the vector data layer. It may include columns such as feature ID, name,
+size, and location.</li>
+</ul></li>
+</ul></li>
+<li>Spatial analysis tools (such as buffer analysis, spatial query, or
+hotspot analysis)</li>
+</ul>
+</div>
+<div id="definitions" class="slide section level2">
+<h1>Definitions:</h1>
+<p><strong>Buffer analysis:</strong> Buffer analysis is a spatial
+analysis technique used to create a buffer zone or area around a
+particular feature or set of features in a geographic dataset. The
+buffer zone is typically a defined distance or area surrounding the
+feature(s), and is created by measuring a set distance or area around
+each feature.</p>
+</div>
+<div id="definitions-cont." class="slide section level2">
+<h1>Definitions (cont.):</h1>
+<p><strong>Spatial query:</strong> A spatial query is a type of query
+used in geographic information systems (GIS) to select features or
+objects in a spatial dataset that meet certain spatial criteria. Spatial
+queries can be used to identify features that intersect, overlap, or are
+within a certain distance of other features in the dataset.</p>
+</div>
+<div id="definitions-cont.-1" class="slide section level2">
+<h1>Definitions (cont.):</h1>
+<p><strong>Hotspot analysis:</strong> Hotspot analysis is a spatial
+analysis technique used to identify areas of a dataset that have a
+statistically significant higher or lower frequency of a particular
+feature or event than would be expected by chance. It is used to
+identify spatial patterns or clusters of features within a dataset.</p>
+</div>
+<div id="outline-of-spatial-analysis-talk-1"
+class="slide section level2">
+<h1>Outline of Spatial Analysis Talk</h1>
+<p>In this talk, we discussed:</p>
+<ul>
+<li>maps and map components</li>
+<li>spatial memory recall and its importance in daily life</li>
+<li>spatial analysis techniques and their applications</li>
+<li>spatial analysis using GIS spatial analysis</li>
+</ul>
+</div>
+</body>
+</html>
