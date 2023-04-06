@@ -2,9 +2,7 @@
 % Sean Burns, PhD, Associate Professor 
 % April 6, 2023
 
-# An Introduction to Spatial Analysis
-
-## Setup: Spatial Analysis and Mapping Techniques in Gaming
+## Prolegomenon: Spatial Analysis and Mapping Techniques in Gaming
 
 - Spatial analysis and mapping techniques are used in the
   production of video games to create realistic and
@@ -85,12 +83,6 @@
     - Opportunities for further exploration and research in
       spatial analysis and GIS technology
 
-## Maps: Example
-
-![Fayette County](Fayette.png)
-
-Source: [KY Dept. of Transportation](https://transportation.ky.gov/Planning/SPRS%20Maps/Fayette.pdf)
-
 ## Maps: Key components
 
 The basic components of a map include:
@@ -131,25 +123,37 @@ Together, these components provide the reader with essential
 information about the map and help them understand the
 spatial relationships between different features on the map.
 
-## Map Projections
+## Map Projections: Cylindrical Projections
 
-- **Mercator Projection:** The Mercator projection is a
-  cylindrical projection that preserves the direction of all
-  lines and shapes, but distorts the size of objects as they
-  move away from the equator. This projection is commonly
-  used for navigation purposes.
-- **Robinson Projection:** The Robinson projection is a
-  compromise projection that balances the size and shape of
-  objects across the map. It is commonly used for general
-  reference maps.
-- **Conic Projection:** The conic projection is a projection
-  that preserves the shape and size of objects within a
-  cone-shaped area of the earth's surface. This projection
-  is commonly used for maps that focus on a specific region.
+**Mercator Projection:** The Mercator projection is a
+cylindrical projection that preserves the direction of all
+lines and shapes, but distorts the size of objects as they
+move away from the equator. This projection is commonly used
+for navigation purposes.
 
-There are many other map projections that can be used, each
-with its own strengths and weaknesses depending on the
-purpose of the map and the area being represented.
+Aids navigation; distorts nearer the poles
+
+## Map Projections: Pseudocynlindrical Projections
+
+**Robinson Projection:** The Robinson projection is a
+compromise projection that balances the size and shape of
+objects across the map. It is commonly used for general
+reference maps.
+
+Aids visualization; distorts nearer the poles
+
+## Map Projections: Conic Projections
+
+**Conic Projection:** The conic projection is a projection
+that preserves the shape and size of objects within a
+cone-shaped area of the earth's surface. This projection is
+commonly used for maps that focus on a specific region.
+
+Used in aviation charts
+
+## Map Projections: Azimuthal Projections
+
+A type of camera view: from a perspective
 
 ## Spatial Memory Recall
 
@@ -185,28 +189,20 @@ daily life, as it allows us to navigate through our
 environment, remember the location of important landmarks,
 and engage in a wide range of spatially-oriented tasks.
 
-## Spatial Memory Recall: Group Exercise
+## Spatial Memory Recall: Exercise
 
 Objective: The goal of this exercise is to introduce
 students to the concept of spatial memory recall by having
-them navigate through a physical environment and recall the
-location of specific objects or landmarks.
+them recall and map the location of specific objects or
+landmarks.
 
-## Materials:
-
-- A large, open space (such as a park or field)
-- Objects or landmarks placed throughout the space (such as
-  cones, flags, or signs)
-- Notebooks or paper for each group to record their
-  observations
-
-## Instructions:
+**Instructions:**
 
 - Divide the students into groups of 3-4 and provide each
   group with a notebook or paper to record their
   observations.
-- Instruct each group to navigate through the open space and
-  memorize the location of specific objects or landmarks.
+- Instruct each group to recall the location of a landmark
+  in relation to their current location.
 - After a set amount of time (e.g. 10 minutes), have each
   group return to a designated starting point and draw a map
   from memory that shows the location of the objects or
@@ -215,27 +211,21 @@ location of specific objects or landmarks.
   class and discuss the strategies they used to remember the
   location of the objects or landmarks.
 
-## Assessment:
-
-- Evaluate students based on the accuracy and completeness
-  of their maps, as well as their ability to describe the
-  strategies they used to remember the location of the
-  objects or landmarks.
-- Facilitate a class discussion about the challenges and
-  limitations of spatial memory recall in physical
-  environments, and how this relates to real-world scenarios
-  such as navigating through unfamiliar places or
-  remembering the location of important landmarks in a city.
-
-## Spatial Analysis Techniques
+## Spatial Analysis
 
 Spatial analysis is a set of techniques used to analyze and
-understand spatial data. Spatial data refers to any data
-that has a geographic or spatial component, such as location
-or distance. Spatial analysis techniques allow us to
-explore, visualize, and analyze this type of data to
-identify patterns and relationships that may not be apparent
-through other forms of analysis.
+understand spatial data.
+
+## Spatial Data
+
+Spatial data refers to any data that has a geographic or
+spatial component, such as location or distance. Spatial
+analysis techniques allow us to explore, visualize, and
+analyze this type of data to identify patterns and
+relationships that may not be apparent through other forms
+of analysis.
+
+## Spatial Analysis Techniques
 
 Spatial analysis techniques can be used in a wide range of
 fields, including geography, environmental science, public
@@ -293,35 +283,7 @@ Overall, spatial analysis provides powerful tools for
 understanding and managing the complexities of spatial data
 and its associated patterns and relationships.
 
-## Spatial Analysis Techniques: GIS Demonstration
-
-Objective: The goal of this exercise is to introduce
-students to GIS software and spatial analysis techniques by
-having them create a map of a fictional city and analyze it
-using spatial analysis tools such as buffer analysis,
-spatial queries, and hotspot analysis.
-
-## Materials:
-
-- GIS software (such as ArcGIS or QGIS)
-- Data for a city (such as roads, buildings, and other
-  infrastructure)
-    - GIS files needed
-        - **Vector data layer:** This is the layer that
-          contains the features you want to buffer, such as
-          roads, buildings, or points of interest. The
-          vector data layer should be in a file format that
-          is compatible with QGIS, such as Shapefile (.shp),
-          GeoJSON (.json), or KML (.kml).
-        - **Attribute table:** The attribute table is a
-          spreadsheet that contains information about the
-          features or events in the vector data layer. It
-          may include columns such as feature ID, name,
-          size, and location.
-- Spatial analysis tools (such as buffer analysis, spatial
-  query, or hotspot analysis)
-
-## Definitions:
+## Definitions: Buffer Analysis
 
 - **Buffer analysis:** Buffer analysis is a spatial analysis
   technique used to create a buffer zone or area around a
@@ -348,7 +310,7 @@ spatial queries, and hotspot analysis.
   analysis or visualization, depending on the needs of the
   user.
 
-## Definitions (cont.):
+## Definitions: Spatial Query
 
 - **Spatial query:** A spatial query is a type of query used
   in geographic information systems (GIS) to select features
@@ -377,7 +339,7 @@ spatial queries, and hotspot analysis.
   proposed development project, in order to assess the
   potential impact of the project on the environment.
 
-## Definitions (cont.):
+## Definitions: Hotspot Analysis
 
 - **Hotspot analysis:** Hotspot analysis is a spatial
   analysis technique used to identify areas of a dataset
@@ -393,14 +355,6 @@ spatial queries, and hotspot analysis.
   a hotspot analysis is typically a map that shows areas of
   the dataset that are statistically significant hotspots or
   coldspots.
-- There are several methods of hotspot analysis, but one
-  commonly used method is the Getis-Ord Gi* statistic. This
-  method uses a statistical algorithm to calculate a z-score
-  for each feature in the dataset, which represents the
-    degree of clustering or dispersion of the feature
-    relative to its surrounding features. The z-scores can
-    then be used to identify areas of the dataset that are
-    statistically significant hotspots or coldspots.
 - Hotspot analysis has applications in a wide range of
   fields, such as public health, crime analysis, and
   environmental science. For example, a public health
@@ -409,7 +363,32 @@ spatial queries, and hotspot analysis.
   order to target prevention and intervention efforts to
   those areas.
 
-## Instructions:
+## Spatial Analysis Techniques: GIS Demonstration
+
+Objective: The goal of this exercise is to introduce
+students to GIS software and spatial analysis techniques.
+
+### Materials:
+
+- GIS software (such as ArcGIS or QGIS)
+- Data for a city (such as roads, buildings, and other
+  infrastructure)
+    - GIS files needed
+        - **Vector data layer:** This is the layer that
+          contains the features you want to buffer, such as
+          roads, buildings, or points of interest. The
+          vector data layer should be in a file format that
+          is compatible with QGIS, such as Shapefile (.shp),
+          GeoJSON (.json), or KML (.kml).
+        - **Attribute table:** The attribute table is a
+          spreadsheet that contains information about the
+          features or events in the vector data layer. It
+          may include columns such as feature ID, name,
+          size, and location.
+- Spatial analysis tools (such as buffer analysis, spatial
+  query, or hotspot analysis)
+
+### Instructions:
 
 - Perform a buffer analysis to identify areas that are
   within a certain distance of a particular feature, such as

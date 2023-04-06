@@ -88,6 +88,11 @@ navigate through a physical space. It involves the brain's
 ability to encode, store, and retrieve information about the
 spatial layout of our environment.
 
+## Spatial Memory Recall: Exercise
+
+Please excuse the interruption of regularly scheduled
+programming for this public service announcement..
+
 ## Spatial Analysis
 
 Spatial analysis is a set of techniques used to analyze and
@@ -114,6 +119,48 @@ of analysis.
 - Spatial data visualization
 - Spatial decision-making
 
+## Definitions: Buffer Analysis
+
+Buffer analysis is a spatial analysis technique used to
+create a buffer zone or area around a particular feature or
+set of features in a geographic dataset. The buffer zone is
+typically a defined distance or area surrounding the
+feature(s), and is created by measuring a set distance or
+area around each feature.
+
+## Definitions: Buffer Analysis
+
+![Buffer Analysis](files/zombie.jpg)
+
+Source:
+[ESRI.com](https://www.esri.com/about/newsroom/arcuser/the-undead-liven-up-the-classroom/)
+
+## Definitions: Spatial Query
+
+A spatial query is a type of query used in geographic
+information systems (GIS) to select features or objects in a
+spatial dataset that meet certain spatial criteria. Spatial
+queries can be used to identify features that intersect,
+overlap, or are within a certain distance of other features
+in the dataset.
+
+## Definitions: Hotspot Analysis
+
+Hotspot analysis is a spatial analysis technique used to
+identify areas of a dataset that have a statistically
+significant higher or lower frequency of a particular
+feature or event than would be expected by chance. It is
+used to identify spatial patterns or clusters of features
+within a dataset.
+
+## Definitions: Hotspot Analysis
+
+![Hotspot
+Analysis](files/BeerHeatMap.JPG)
+
+Source:
+[OutAlivePodcast](https://www.outalivepodcast.com/the-blog/gis-tool-hot-spot-analysis)
+
 ## Spatial Analysis Techniques: GIS Demonstration
 
 - GIS software (such as ArcGIS or QGIS)
@@ -131,35 +178,17 @@ of analysis.
           features or events in the vector data layer. It
           may include columns such as feature ID, name,
           size, and location.
+    - Data: [Natural
+      Earth](https://www.naturalearthdata.com/)
 - Spatial analysis tools (such as buffer analysis, spatial
   query, or hotspot analysis)
 
-## Definitions:
+## Educational Paths
 
-**Buffer analysis:** Buffer analysis is a spatial analysis
-technique used to create a buffer zone or area around a
-particular feature or set of features in a geographic
-dataset. The buffer zone is typically a defined distance or
-area surrounding the feature(s), and is created by measuring
-a set distance or area around each feature.
+Cartography & GIS Courses at UK are provided by Geography
+department in the College of Arts and Sciences.
 
-## Definitions (cont.):
-
-**Spatial query:** A spatial query is a type of query used
-in geographic information systems (GIS) to select features
-or objects in a spatial dataset that meet certain spatial
-criteria. Spatial queries can be used to identify features
-that intersect, overlap, or are within a certain distance of
-other features in the dataset.
-
-## Definitions (cont.):
-
-**Hotspot analysis:** Hotspot analysis is a spatial analysis
-technique used to identify areas of a dataset that have a
-statistically significant higher or lower frequency of a
-particular feature or event than would be expected by
-chance. It is used to identify spatial patterns or clusters
-of features within a dataset.
+[Cartography & GIS Courses](https://geography.as.uky.edu/cartlab-courses)
 
 ## Outline of Spatial Analysis Talk
 
@@ -169,3 +198,4 @@ In this talk, we discussed:
 - spatial memory recall and its importance in daily life
 - spatial analysis techniques and their applications
 - spatial analysis using GIS spatial analysis
+- GIS demonstration
