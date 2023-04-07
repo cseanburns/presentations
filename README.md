@@ -34,5 +34,5 @@ pandoc -s -t html5 --toc file.md -o file.html
 I use the following command to generate HTML slides:
 
 ```
-pandoc -s -i -t slidy spatial-analysis.md -o spatial-analysis.html
+pandoc -s -i -t slidy file.md -o file.html
 ```
