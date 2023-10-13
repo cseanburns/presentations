@@ -27,6 +27,8 @@ science and scholarship:
 
 # Motivation
 
+Why is a focus on **problem-finding** important?
+
 Whole disciplines are dedicated to *problem-solving* but part of getting an
 education and part of being a great researcher is being able to ask **good
 questions**.
@@ -42,6 +44,8 @@ Merton, Robert K. (1968/1973). The Matthew Effect in Science. In N. W. Storer
 
 # Motivation
 
+Why is a focus on **problem-finding** important?
+
 > The formulation of a problem is often more essential than its solution, which
 > may be merely a matter of mathematical or experimental skill (Einstein &
 > Infeld, 1938, p. 92, as cited in Abdulla & Cramond, 2018, p. 198).
@@ -49,7 +53,7 @@ Merton, Robert K. (1968/1973). The Matthew Effect in Science. In N. W. Storer
 And:
 
 > Despite its theoretical and practical importance, it is surprising that PF
-> \[problem-finding\] has received little attention ..." (Abdull & Cramond, 2018,
+> \[problem-finding\] has received little attention ... (Abdull & Cramond, 2018,
 > p. 200).
 
 Abdulla, A. M., & Cramond, B. (2018). The creative problem finding hierarchy: A suggested model for understanding problem finding. creativity. *Theories – Research - Applications, 5*(2), 197–229.
@@ -106,11 +110,14 @@ Anecdotally:
 
 # Discursive, Learning, and Problem-Finding
 
-Why discursive? To promote independent learning and exploration. To learn how to ask **good questions** through dialogue, discussion, argumentation, and debate.
+Why discursive?
 
+- To promote independent learning and exploration. To learn how to ask **good questions** through dialogue, discussion, argumentation, and debate.
 - Generative AI chat bots are *chat* (conversation) centered.
 
 # Discursive, Learning, and Problem-Finding
+
+Why discursive?
 
 - Student led discursive practices may foster independent, critical thinkers
 
