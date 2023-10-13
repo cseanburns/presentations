@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Date: 10-13-2023
+# Pandoc command to convert Markdown slides to HTML slides:
+
+pandoc -f markdown -t slidy -s "$1" -o "$(basename -s md "$1")"html
