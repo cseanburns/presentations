@@ -4,7 +4,8 @@ author: "C. Sean Burns, PhD<br/>
     Associate Professor<br/>  
     School of Information Science<br/>
     College of Communication and Information<br/>
-    University of Kentucky"
+    University of Kentucky<br/><br/>
+    Commonwealth Computational Summit 2023: Artificial Intelligence"
 keywords: [generative ai, problem-finding, research, learning, chatgpt]
 date: 2023-10-16
 lang: en-US
