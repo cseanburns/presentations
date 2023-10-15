@@ -78,7 +78,7 @@ I define and use the term *discursive* in two ways:
 
 # Socratic method: Problem-finding
 
-For example, through dialogue and conversation, the Socratic method can be used to:
+For example, through dialogue, discussion, argumentation, and debate, the Socratic method can be used to:
 
 - Identify assumptions
 - Raise question
@@ -91,18 +91,6 @@ For example, through dialogue and conversation, the Socratic method can be used 
 # Motivation
 
 But what's the problem I am responding to?
-
-> Roland Mackey: Sheila is studying the art of conversation.  
-
-> Harris K. Telemacher: You're taking a course in conversation?  
-
-> Sheila: Yes.
-
-- L.A. Story (1991).
-
-# Motivation
-
-Anecdotally: 
 
 > Instructor: Ask ChatGPT how to think about X problem.
 
