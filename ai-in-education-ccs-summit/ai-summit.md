@@ -120,7 +120,7 @@ Why discursive?
 > insights to overcome other tasks are more likely to be successful (Weinert &
 > Helmke, 1995, p. 141).
 
-- Generative AI can role play and discursive practices can foster acquisition
+- Generative AI can role play and using discursive practices can foster acquisition
   of a discipline's lexicon and grammar (Lung, 2008)
 
 Lung, J. (2008). Discursive hierarchical patterning in Law and Management cases. *English for Specific Purposes, 27*.
