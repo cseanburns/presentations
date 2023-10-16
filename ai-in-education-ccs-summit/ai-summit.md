@@ -120,21 +120,19 @@ Why discursive?
 > insights to overcome other tasks are more likely to be successful (Weinert &
 > Helmke, 1995, p. 141).
 
-- Generative AI can role play and using discursive practices can foster acquisition
-  of a discipline's lexicon and grammar (Lung, 2008)
-
-Lung, J. (2008). Discursive hierarchical patterning in Law and Management cases. *English for Specific Purposes, 27*.
-[https://doi.org/10.1016/J.ESP.2007.11.001](lung2008)
-
 Weinert, F., & Helmke, A. (1995). Learning from wise Mother Nature or Big
 Brother Instructor: The wrong choice as seen from an educational perspective.
 *Educational Psychologist, 30*. doi:
 [https://doi.org/10.1207/S15326985EP3003_4][weinert1995]
 
-[lung2008]:https://doi.org/10.1016/J.ESP.2007.11.001
 [weinert1995]:10.1207/S15326985EP3003_4
 
 # Problem-Finding
+
+- Because problem-finding is important to learning and to science,
+- Because discursive practices help us problem-find,
+- Because generative AI can be used as a discursive agent (i.e., chat bot),
+- Then we have the opportunity to develop methodologies to using generative AI as a *problem-finding* tool.
 
 As an example, I used ChatGPT to problem-find a framework for problem-finding.
 
