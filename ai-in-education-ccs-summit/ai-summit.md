@@ -352,7 +352,7 @@ Undergraduate students enrolled in STEM programs.
 - Identification of patterns that can be harnessed for research refinement.
 - Insight into the limitations and challenges posed by AI-enabled discursive exchanges.
 
-# Conclusion
+# ChatGPT: Conclusion
 
 Finally, I asked ChatGPT to summarize and provide some key takeaways from our session:
 
@@ -365,3 +365,10 @@ Finally, I asked ChatGPT to summarize and provide some key takeaways from our se
 - **Ethical and Epistemic Considerations**: While AI offers many advantages,
   it's crucial to consider its limitations, especially concerning ethical and
   epistemic aspects.
+
+# Conclusion: Problem-Finding
+
+- Because problem-finding is important to learning and to science,
+- Because discursive practices help us problem-find,
+- Because generative AI can be used as a discursive agent (i.e., chat bot),
+- Then we have the opportunity to develop methodologies to using generative AI as a *problem-finding* tool.
