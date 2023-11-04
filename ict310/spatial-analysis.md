@@ -1,6 +1,7 @@
 % An Introduction to Spatial Analysis
-% Sean Burns, PhD, Associate Professor 
-% April 6, 2023
+% Sean Burns, PhD
+% Associate Professor 
+% November 7, 2023
 
 ## Prolegomenon: Spatial Analysis and Mapping Techniques in Gaming
 
