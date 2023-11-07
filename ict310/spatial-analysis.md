@@ -7,9 +7,9 @@
 - Spatial analysis research topics
 - Map components
 - Map projections
-- Spatial memory recall
 - Spatial analysis: Techniques and applications
 - GIS spatial analysis: Demonstration
+- Google Earth Activities
 
 ## Spatial Analysis Research Topic: ex. 1
 
@@ -220,17 +220,6 @@ Projection](https://en.wikipedia.org/wiki/General_Perspective_projection)
 
 <!-- a type of camera view: from a perspective -->
 
-## Spatial Memory Recall
-
-Spatial memory recall refers to the ability to remember and
-navigate through a physical space. It involves the brain's
-ability to encode, store, and retrieve information about the
-spatial layout of our environment.
-
-## Spatial Memory Recall: Exercise
-
-Test time!
-
 ## Spatial Analysis Techniques: Methods
 
 Spatial analysis techniques allow us to explore, visualize, and analyze spatial
@@ -340,8 +329,19 @@ in the dataset.
     - Data: [TIGER/Line Shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)
     - Data: [TIGER/Line with Selected Demographic and Economic Data](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-data.html)
         - [TIGER/Line Demo by Stephen Metts](https://vimeo.com/462198777)
+    - Data: [Google Earth/KML Files](https://www.usgs.gov/programs/earthquake-hazards/google-earthtmkml-files)
 - Spatial analysis techniques (such as buffer analysis, spatial
   query, or hotspot analysis)
+
+## Spatial Analysis Techniques: Other Software
+
+- Python:
+    - [Python Geographic Data Analysis](https://pythongis.org/index.html)
+    - [GeoPandas](https://geopandas.org/en/stable/)
+    - and more.
+- R:
+    - [Spatial Data Science](https://rspatial.org/)
+    - [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html)
 
 ## Educational Paths
 
@@ -350,6 +350,37 @@ department in the College of Arts and Sciences.
 
 [Cartography & GIS Courses](https://geography.as.uky.edu/cartlab-courses)
 
+## Google Earth Activity 1
+
+- Visit [https://earth.google.com](https://earth.google.com)
+
+### Part 1
+
+- What landmarks are located at the following coordinates:
+    - 38.889484	-77.035278
+    - 38.624691	-90.184776
+    - 40.689247	-74.044502
+    - 41.7325 N, 49.9469 W
+    - 35.296389, 10.706944
+    - 36°03'19"N 112°07'19"W
+- How does the goegraphy of the area influence the location of the landmark?
+- Are there any patterns about the locations of these landmarks? Are they near water, high elevations?
+
+## Google Earth Activities 2 and 3
+
+### Part 2
+
+- Using New Circle Road, measure the perimeter in miles around Lexington?
+- Using any sidewalk path, what is the distance from Lucille Caudill Little Fine Arts Library to the Gatton Student Center?
+
+### Part 3
+
+- Explore [USGS Google Earth/KML Files](https://www.usgs.gov/programs/earthquake-hazards/google-earthtmkml-files)
+- Download a KML/KMZ file and upload it to Google Earth.
+    - What did you upload?
+    - What does it tell you?
+    - What did you learn?
+
 ## Outline of Spatial Analysis Talk
 
 In this talk, we discussed:
@@ -357,6 +388,6 @@ In this talk, we discussed:
 - Spatial analysis research topics
 - Maps components
 - Map projects
-- Spatial memory recall
 - Spatial analysis: Techniques and their applications
 - GIS spatial analysis: Demonstration
+- Google Earth Activities
