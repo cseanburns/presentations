@@ -338,6 +338,7 @@ in the dataset.
     - Data: [data.gov](https://data.gov)
     - Data: [UKY GIS](https://gishub.uky.edu/pages/data)
     - Data: [TIGER/Line Shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)
+        - [TIGER/Line Demo by Stephen Metts](https://vimeo.com/462198777)
 - Spatial analysis techniques (such as buffer analysis, spatial
   query, or hotspot analysis)
 
