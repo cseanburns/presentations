@@ -2,6 +2,12 @@
 % Sean Burns, PhD
 % November 7, 2023
 
+## Introduction
+
+My goal is to provide you an overview of spatial analysis,
+but most importantly,
+to encourage you to think spatially about your topics of interest.
+
 ## Outline of Spatial Analysis Talk
 
 - Spatial analysis research topics
@@ -40,6 +46,8 @@ https://doi.org/10.1016/J.ENERGY.2019.06.111
 
 ## Spatial Analysis Research Topic: Example Hypotheses
 
+**Note:** The following list of hypotheses was generated via an exchange with ChatGPT.
+
 1. **Environmental Monitoring and Management**: 
    - Hypothesis: Deforestation in the Amazon rainforest is correlated with
      increased local temperature anomalies.
@@ -62,14 +70,14 @@ https://doi.org/10.1016/J.ENERGY.2019.06.111
      semi-arid regions.
    - GIS Application: Map agricultural fields, overlay with water source
      locations, and perform spatial analysis to determine the impact on yields.
+
+## Spatial Analysis Research Topic: Example Hypotheses
+
 5. **Disaster Management and Response**:
    - Hypothesis: Areas with lower socioeconomic status have a slower recovery
      rate after natural disasters.
    - GIS Application: Use socioeconomic data layers and post-disaster recovery
      data to analyze and map the recovery rates.
-
-## Spatial Analysis Research Topic: Example Hypotheses
-
 6. **Transportation and Logistics**:
    - Hypothesis: Traffic congestion in urban areas increases air pollution
      levels and has a negative impact on public health.
@@ -80,6 +88,9 @@ https://doi.org/10.1016/J.ENERGY.2019.06.111
      biodiversity.
    - GIS Application: Map habitat distributions, fragmentation patterns, and
      species richness to assess the impact of habitat fragmentation.
+
+## Spatial Analysis Research Topic: Example Hypotheses
+
 8. **Climatology and Weather Forecasting**:
    - Hypothesis: Certain land use patterns can influence local weather
      phenomena, like rainfall.
@@ -98,8 +109,9 @@ https://doi.org/10.1016/J.ENERGY.2019.06.111
 
 ## Maps in GIS
 
+- Spatial analysis is of course a very intensive data visualization field of study and method.
 - Maps in GIS serve as a foundational visual representation layer.
-- They allow for the integration, analysis, and interpretation of geospatial data.
+- Maps allow for the integration, analysis, and interpretation of geospatial data.
 
 ## Maps: Key components
 
@@ -243,7 +255,7 @@ Some common spatial data formats:
 
 - Shapefiles (.shp): a vector data format used in GIS software
 - Keyhole Markup Language (.kml/.kmz): common file format used in applications like Google Earth
-- GeoJSON (.geojason): a format used to encode geographic data using JavaScript Object Notation (JSON)
+- GeoJSON (.geojson): a format used to encode geographic data using JavaScript Object Notation (JSON)
 - TIFF/GeoTIFF (.tiff/.tif): A raster graphics image format with georeferencing information embedded
 - GPS Exchange Format (.gpx): An XML format for the interchange of GPS data
 
@@ -259,7 +271,7 @@ Some common spatial data types:
 
 - Geographic Information Systems (GIS)
     - QGIS: [https://qgis.org/en/site/](https://qgis.org/en/site/)
-    - QGIS Tutorials and Tips: [https://qgis.org/en/site/](https://qgis.org/en/site/)
+    - QGIS Tutorials and Tips: [https://qgis.org/en/site/](https://www.qgistutorials.com/en/)
     - ArcGIS: [https://www.arcgis.com/index.html](https://www.arcgis.com/index.html)
     - GRASS GIS: [https://grass.osgeo.org/](https://grass.osgeo.org/)
     - GeoDa (spatial data science): [https://geodacenter.github.io/](https://geodacenter.github.io/)
@@ -307,10 +319,10 @@ in the dataset.
 
 ## Spatial Analysis Techniques: GIS Demonstration
 
-- GIS software (such as ArcGIS or QGIS)
+- GIS software (such as QGIS or ArcGIS)
 - Data for a city (such as roads, buildings, and other
   infrastructure)
-    - GIS files needed
+    - GIS files needed, at a minimum
         - **Vector data layer:** This is the layer that
           contains the features you want to buffer, such as
           roads, buildings, or points of interest. The
@@ -322,6 +334,7 @@ in the dataset.
           features or events in the vector data layer. It
           may include columns such as feature ID, name,
           size, and location.
+- Data Sources (there are more out there)
     - Data: [Natural Earth](https://www.naturalearthdata.com/)
     - Data: [Lexington Geographic Information Services](https://www.lexingtonky.gov/departments/geographic-information-services)
     - Data: [data.gov](https://data.gov)
@@ -343,10 +356,16 @@ in the dataset.
     - [Spatial Data Science](https://rspatial.org/)
     - [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html)
 
+- R examples:
+    - [USDA Obesity and Diabetes Rates by US Census Region](https://rpubs.com/seancsb/52342)
+    - [Texas Death Row](https://rpubs.com/seancsb/6832)
+
 ## Educational Paths
 
-Cartography & GIS Courses at UK are provided by Geography
-department in the College of Arts and Sciences.
+GIS is fun and super interesting, but it's also hard work and requires study.
+
+If interested, explore Cartography & GIS Courses at UK.
+These are provided by the Geography department in the College of Arts and Sciences.
 
 [Cartography & GIS Courses](https://geography.as.uky.edu/cartlab-courses)
 
@@ -391,3 +410,7 @@ In this talk, we discussed:
 - Spatial analysis: Techniques and their applications
 - GIS spatial analysis: Demonstration
 - Google Earth Activities
+
+## Conclusion
+
+Think spatially.

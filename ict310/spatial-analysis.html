@@ -39,6 +39,12 @@ Sean Burns, PhD
   </p>
   <p class="date">November 7, 2023</p>
 </div>
+<div id="introduction" class="slide section level2">
+<h1>Introduction</h1>
+<p>My goal is to provide you an overview of spatial analysis, but most
+importantly, to encourage you to think spatially about your topics of
+interest.</p>
+</div>
 <div id="outline-of-spatial-analysis-talk" class="slide section level2">
 <h1>Outline of Spatial Analysis Talk</h1>
 <ul>
@@ -47,7 +53,7 @@ Sean Burns, PhD
 <li>Map projections</li>
 <li>Spatial analysis: Techniques and applications</li>
 <li>GIS spatial analysis: Demonstration</li>
-<li>Google Earth Activity</li>
+<li>Google Earth Activities</li>
 </ul>
 </div>
 <div id="spatial-analysis-research-topic-ex.-1"
@@ -88,6 +94,8 @@ https://doi.org/10.1016/J.ENERGY.2019.06.111</p>
 <div id="spatial-analysis-research-topic-example-hypotheses"
 class="slide section level2">
 <h1>Spatial Analysis Research Topic: Example Hypotheses</h1>
+<p><strong>Note:</strong> The following list of hypotheses was generated
+via an exchange with ChatGPT.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Environmental Monitoring and Management</strong>:
 <ul>
@@ -121,6 +129,12 @@ sources in semi-arid regions.</li>
 locations, and perform spatial analysis to determine the impact on
 yields.</li>
 </ul></li>
+</ol>
+</div>
+<div id="spatial-analysis-research-topic-example-hypotheses-1"
+class="slide section level2">
+<h1>Spatial Analysis Research Topic: Example Hypotheses</h1>
+<ol start="5" style="list-style-type: decimal">
 <li><strong>Disaster Management and Response</strong>:
 <ul>
 <li>Hypothesis: Areas with lower socioeconomic status have a slower
@@ -128,12 +142,6 @@ recovery rate after natural disasters.</li>
 <li>GIS Application: Use socioeconomic data layers and post-disaster
 recovery data to analyze and map the recovery rates.</li>
 </ul></li>
-</ol>
-</div>
-<div id="spatial-analysis-research-topic-example-hypotheses-1"
-class="slide section level2">
-<h1>Spatial Analysis Research Topic: Example Hypotheses</h1>
-<ol start="6" style="list-style-type: decimal">
 <li><strong>Transportation and Logistics</strong>:
 <ul>
 <li>Hypothesis: Traffic congestion in urban areas increases air
@@ -148,6 +156,12 @@ in biodiversity.</li>
 <li>GIS Application: Map habitat distributions, fragmentation patterns,
 and species richness to assess the impact of habitat fragmentation.</li>
 </ul></li>
+</ol>
+</div>
+<div id="spatial-analysis-research-topic-example-hypotheses-2"
+class="slide section level2">
+<h1>Spatial Analysis Research Topic: Example Hypotheses</h1>
+<ol start="8" style="list-style-type: decimal">
 <li><strong>Climatology and Weather Forecasting</strong>:
 <ul>
 <li>Hypothesis: Certain land use patterns can influence local weather
@@ -174,9 +188,11 @@ patterns and hotspots.</li>
 <div id="maps-in-gis" class="slide section level2">
 <h1>Maps in GIS</h1>
 <ul>
+<li>Spatial analysis is of course a very intensive data visualization
+field of study and method.</li>
 <li>Maps in GIS serve as a foundational visual representation
 layer.</li>
-<li>They allow for the integration, analysis, and interpretation of
+<li>Maps allow for the integration, analysis, and interpretation of
 geospatial data.</li>
 </ul>
 </div>
@@ -366,7 +382,7 @@ class="slide section level2">
 <li>Shapefiles (.shp): a vector data format used in GIS software</li>
 <li>Keyhole Markup Language (.kml/.kmz): common file format used in
 applications like Google Earth</li>
-<li>GeoJSON (.geojason): a format used to encode geographic data using
+<li>GeoJSON (.geojson): a format used to encode geographic data using
 JavaScript Object Notation (JSON)</li>
 <li>TIFF/GeoTIFF (.tiff/.tif): A raster graphics image format with
 georeferencing information embedded</li>
@@ -401,7 +417,7 @@ class="slide section level2">
 <li>QGIS: <a
 href="https://qgis.org/en/site/">https://qgis.org/en/site/</a></li>
 <li>QGIS Tutorials and Tips: <a
-href="https://qgis.org/en/site/">https://qgis.org/en/site/</a></li>
+href="https://www.qgistutorials.com/en/">https://qgis.org/en/site/</a></li>
 <li>ArcGIS: <a
 href="https://www.arcgis.com/index.html">https://www.arcgis.com/index.html</a></li>
 <li>GRASS GIS: <a
@@ -462,10 +478,10 @@ other features in the dataset.</p>
 class="slide section level2">
 <h1>Spatial Analysis Techniques: GIS Demonstration</h1>
 <ul>
-<li>GIS software (such as ArcGIS or QGIS)</li>
+<li>GIS software (such as QGIS or ArcGIS)</li>
 <li>Data for a city (such as roads, buildings, and other infrastructure)
 <ul>
-<li>GIS files needed
+<li>GIS files needed, at a minimum
 <ul>
 <li><strong>Vector data layer:</strong> This is the layer that contains
 the features you want to buffer, such as roads, buildings, or points of
@@ -477,6 +493,9 @@ spreadsheet that contains information about the features or events in
 the vector data layer. It may include columns such as feature ID, name,
 size, and location.</li>
 </ul></li>
+</ul></li>
+<li>Data Sources (there are more out there)
+<ul>
 <li>Data: <a href="https://www.naturalearthdata.com/">Natural
 Earth</a></li>
 <li>Data: <a
@@ -519,12 +538,21 @@ Analysis</a></li>
 <li><a href="https://cran.r-project.org/web/views/Spatial.html">CRAN
 Task View: Analysis of Spatial Data</a></li>
 </ul></li>
+<li>R examples:
+<ul>
+<li><a href="https://rpubs.com/seancsb/52342">USDA Obesity and Diabetes
+Rates by US Census Region</a></li>
+<li><a href="https://rpubs.com/seancsb/6832">Texas Death Row</a></li>
+</ul></li>
 </ul>
 </div>
 <div id="educational-paths" class="slide section level2">
 <h1>Educational Paths</h1>
-<p>Cartography &amp; GIS Courses at UK are provided by Geography
-department in the College of Arts and Sciences.</p>
+<p>GIS is fun and super interesting, but it’s also hard work and
+requires study.</p>
+<p>If interested, explore Cartography &amp; GIS Courses at UK. These are
+provided by the Geography department in the College of Arts and
+Sciences.</p>
 <p><a href="https://geography.as.uky.edu/cartlab-courses">Cartography
 &amp; GIS Courses</a></p>
 </div>
@@ -557,8 +585,8 @@ they near water, high elevations?</li>
 <ul>
 <li>Using New Circle Road, measure the perimeter in miles around
 Lexington?</li>
-<li>Measure the distance from Lucille Caudill Little Fine Arts Library
-to the Gatton Student Center</li>
+<li>Using any sidewalk path, what is the distance from Lucille Caudill
+Little Fine Arts Library to the Gatton Student Center?</li>
 </ul>
 <h3 id="part-3">Part 3</h3>
 <ul>
@@ -583,8 +611,12 @@ class="slide section level2">
 <li>Map projects</li>
 <li>Spatial analysis: Techniques and their applications</li>
 <li>GIS spatial analysis: Demonstration</li>
-<li>Google Earth Activity</li>
+<li>Google Earth Activities</li>
 </ul>
+</div>
+<div id="conclusion" class="slide section level2">
+<h1>Conclusion</h1>
+<p>Think spatially.</p>
 </div>
 </body>
 </html>
