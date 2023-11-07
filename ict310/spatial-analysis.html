@@ -6,16 +6,24 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="author" content="Sean Burns, PhD, Associate Professor" />
-  <meta name="date" content="2023-04-06" />
+  <meta name="author" content="Sean Burns, PhD" />
+  <meta name="date" content="2023-11-07" />
   <title>An Introduction to Spatial Analysis</title>
   <style type="text/css">
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
@@ -27,45 +35,155 @@
 <div class="slide titlepage">
   <h1 class="title">An Introduction to Spatial Analysis</h1>
   <p class="author">
-Sean Burns, PhD, Associate Professor
+Sean Burns, PhD
   </p>
-  <p class="date">April 6, 2023</p>
-</div>
-<div id="prolegomenon-spatial-analysis-and-mapping-techniques-in-gaming"
-class="slide section level2">
-<h1>Prolegomenon: Spatial Analysis and Mapping Techniques in Gaming</h1>
-<p>Spatial analysis and mapping techniques are used in the production of
-video games to create realistic and immersive game environments.</p>
-</div>
-<div id="god-of-war-ragnarök" class="slide section level2">
-<h1>God Of War Ragnarök</h1>
-<div class="figure">
-<img src="files/god_of_war.png" alt="" />
-<p class="caption">God of War Ragnarök</p>
-</div>
-<p>Source: <a href="https://mapgenie.io/">Map Genie</a></p>
-</div>
-<div id="south-park-the-stick-of-truth" class="slide section level2">
-<h1>South Park: The Stick of Truth</h1>
-<div class="figure">
-<img src="files/south_park.png" alt="" />
-<p class="caption">South Park: The Stick of Truth</p>
-</div>
-<p>Source: <a href="https://mapgenie.io/">Map Genie</a></p>
+  <p class="date">November 7, 2023</p>
 </div>
 <div id="outline-of-spatial-analysis-talk" class="slide section level2">
 <h1>Outline of Spatial Analysis Talk</h1>
-<ul class="incremental">
+<ul>
+<li>Spatial analysis research topics</li>
 <li>Map components</li>
-<li>Spatial memory recall and its importance in daily life</li>
-<li>Spatial analysis techniques and their applications</li>
-<li>Introduction to GIS spatial analysis</li>
+<li>Map projections</li>
+<li>Spatial memory recall</li>
+<li>Spatial analysis: Techniques and applications</li>
+<li>GIS spatial analysis: Demonstration</li>
+</ul>
+</div>
+<div id="spatial-analysis-research-topic-ex.-1"
+class="slide section level2">
+<h1>Spatial Analysis Research Topic: ex. 1</h1>
+<ul>
+<li><strong>Environmental Monitoring and Management</strong>:
+<ul>
+<li>Anthropogenic activities such as deforestation can lead to changes
+in temperature, rainfall, and vegetation levels, further degrading the
+Amazon and disrupting the hydrological cycle (Braga et al., 2020).</li>
+</ul></li>
+</ul>
+<p>Silva, A. A., Braga, M., Ferreira, J., Santos, V. J., Alves, S. do
+C., Oliveira, J. C. de, … Calijuri, M. (2020). Anthropic activities and
+the Legal Amazon: Estimative of impacts on forest and regional climate
+for 2030. <em>Remote Sensing Applications: Society and Environment,
+18,</em> 100304. https://doi.org/10.1016/j.rsase.2020.100304</p>
+</div>
+<div id="spatial-analysis-research-topic-ex.-2"
+class="slide section level2">
+<h1>Spatial Analysis Research Topic: ex. 2</h1>
+<ul>
+<li><strong>Urban Planning</strong>:
+<ul>
+<li>GIS-based tools can automate the planning and design process of
+district heating networks (as opposed to within building heating
+systems), making it less complex and time-consuming, especially for
+large networks. The authors found that GIS tools can effectively and
+efficiently produce network layouts (Jebamalai et al., 2019).</li>
+</ul></li>
+</ul>
+<p>Jebamalai, J. M., Marlein, K., Laverge, J., Vandevelde, L., &amp; van
+den Broek, M. (2019). <em>An automated GIS-based planning and design
+tool for district heating: Scenarios for a Dutch city.</em> Energy.
+https://doi.org/10.1016/J.ENERGY.2019.06.111</p>
+</div>
+<div id="spatial-analysis-research-topic-example-hypotheses"
+class="slide section level2">
+<h1>Spatial Analysis Research Topic: Example Hypotheses</h1>
+<ol style="list-style-type: decimal">
+<li><strong>Environmental Monitoring and Management</strong>:
+<ul>
+<li>Hypothesis: Deforestation in the Amazon rainforest is correlated
+with increased local temperature anomalies.</li>
+<li>GIS Application: Use satellite imagery and deforestation data to map
+changes over time and analyze the correlation with temperature
+data.</li>
+</ul></li>
+<li><strong>Urban Planning and Infrastructure</strong>:
+<ul>
+<li>Hypothesis: Urban heat islands in major cities contribute to higher
+energy consumption in buildings.</li>
+<li>GIS Application: Map urban heat islands using remote sensing and
+assess the impact on energy consumption patterns in residential and
+commercial buildings.</li>
+</ul></li>
+<li><strong>Public Health</strong>:
+<ul>
+<li>Hypothesis: There is a relationship between the proximity to waste
+management sites and the incidence of respiratory diseases in a
+population.</li>
+<li>GIS Application: Analyze the spatial distribution of waste
+management sites and health data to identify any correlations.</li>
+</ul></li>
+<li><strong>Agriculture and Food Security</strong>:
+<ul>
+<li>Hypothesis: Crop yields are affected by the distance from water
+sources in semi-arid regions.</li>
+<li>GIS Application: Map agricultural fields, overlay with water source
+locations, and perform spatial analysis to determine the impact on
+yields.</li>
+</ul></li>
+<li><strong>Disaster Management and Response</strong>:
+<ul>
+<li>Hypothesis: Areas with lower socioeconomic status have a slower
+recovery rate after natural disasters.</li>
+<li>GIS Application: Use socioeconomic data layers and post-disaster
+recovery data to analyze and map the recovery rates.</li>
+</ul></li>
+</ol>
+</div>
+<div id="spatial-analysis-research-topic-example-hypotheses-1"
+class="slide section level2">
+<h1>Spatial Analysis Research Topic: Example Hypotheses</h1>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Transportation and Logistics</strong>:
+<ul>
+<li>Hypothesis: Traffic congestion in urban areas increases air
+pollution levels and has a negative impact on public health.</li>
+<li>GIS Application: Map traffic patterns, congestion points, and air
+quality measurements to study the relationship.</li>
+</ul></li>
+<li><strong>Conservation Biology and Ecology</strong>:
+<ul>
+<li>Hypothesis: The fragmentation of natural habitats leads to a decline
+in biodiversity.</li>
+<li>GIS Application: Map habitat distributions, fragmentation patterns,
+and species richness to assess the impact of habitat fragmentation.</li>
+</ul></li>
+<li><strong>Climatology and Weather Forecasting</strong>:
+<ul>
+<li>Hypothesis: Certain land use patterns can influence local weather
+phenomena, like rainfall.</li>
+<li>GIS Application: Analyze land use data and historical weather
+patterns to explore the relationship.</li>
+</ul></li>
+<li><strong>Archaeology</strong>:
+<ul>
+<li>Hypothesis: Ancient human settlements were strategically located
+near water sources.</li>
+<li>GIS Application: Map known archaeological sites and ancient
+waterways to determine the correlation.</li>
+</ul></li>
+<li><strong>Criminology and Law Enforcement</strong>:
+<ul>
+<li>Hypothesis: There is a spatial correlation between unemployment
+rates and crime rates in urban areas.</li>
+<li>GIS Application: Overlay crime data with economic data to identify
+patterns and hotspots.</li>
+</ul></li>
+</ol>
+</div>
+<div id="maps-in-gis" class="slide section level2">
+<h1>Maps in GIS</h1>
+<ul>
+<li>Maps in GIS serve as a foundational visual representation
+layer.</li>
+<li>They allow for the integration, analysis, and interpretation of
+geospatial data.</li>
 </ul>
 </div>
 <div id="maps-key-components" class="slide section level2">
 <h1>Maps: Key components</h1>
-<p>The basic components of a map include:</p>
-<ul class="incremental">
+<p>Maps have key components. These include:</p>
+<ul>
 <li>Title</li>
 <li>Legend</li>
 <li>Scale</li>
@@ -77,32 +195,91 @@ video games to create realistic and immersive game environments.</p>
 </div>
 <div id="maps-example" class="slide section level2">
 <h1>Maps: Example</h1>
-<div class="figure">
-<img src="files/Fayette.png" alt="" />
-<p class="caption">Fayette County</p>
+<div class="float">
+<img src="files/Fayette.png" alt="Fayette County" />
+<div class="figcaption">Fayette County</div>
 </div>
 <p>Source: <a
 href="https://transportation.ky.gov/Planning/SPRS%20Maps/Fayette.pdf">KY
 Dept. of Transportation</a></p>
 </div>
+<div id="map-projections" class="slide section level2">
+<h1>Map Projections</h1>
+<p>Since the Earth is <strong>not flat</strong>, maps have to be
+<em>distorted</em>, or <strong>projected</strong>, onto a two
+dimensional image.</p>
+<ul>
+<li>Map projections are systematic transformations of the earth’s
+three-dimensional surface onto a two-dimensional plane (e.g., a computer
+monitor).</li>
+<li>Each transformation has different properties and uses.</li>
+<li>These properties and uses are designed to preserve certain spatial
+attributes, like:
+<ul>
+<li><strong>area</strong>,</li>
+<li><strong>shape</strong>,</li>
+<li><strong>distance</strong>, and</li>
+<li><strong>direction</strong>.</li>
+</ul></li>
+</ul>
+</div>
+<div id="common-map-projections" class="slide section level2">
+<h1>Common Map Projections</h1>
+<p>Some common projections include:</p>
+<ul>
+<li>Cylindrical projections</li>
+<li>Pseudocylindrical projections</li>
+<li>Conical projections</li>
+<li>Azimuthal projections</li>
+</ul>
+</div>
 <div id="map-projections-cylindrical-projections"
 class="slide section level2">
 <h1>Map Projections: Cylindrical Projections</h1>
-<div class="figure">
-<img src="files/mercator_projection.jpg" alt="" />
-<p class="caption">Mercator Projection</p>
+<ul>
+<li>The main advantage of cylindrical projections is that they preserve
+angles and shapes of landmasses near the equator, while a significant
+disadvantage is the distortion of size and shape of regions as they
+approach the poles.</li>
+<li>Cylindrical projections are primarily used for navigational
+purposes, as they accurately represent directions and angles, making
+them suitable for marine charts and certain types of world maps where
+true direction is a priority.</li>
+</ul>
+</div>
+<div id="map-projections-cylindrical-projections-1"
+class="slide section level2">
+<h1>Map Projections: Cylindrical Projections</h1>
+<div class="float">
+<img src="files/mercator_projection.jpg" alt="Mercator Projection" />
+<div class="figcaption">Mercator Projection</div>
 </div>
 <!-- Aids navigation; distorts nearer the poles -->
 <p>Source: <a
 href="https://en.wikipedia.org/wiki/Mercator_projection">Wikipedia:
 Mercator Projection</a></p>
 </div>
-<div id="map-projections-pseudocynlindrical-projections"
+<div id="map-projections-pseudocylindrical-projections"
 class="slide section level2">
-<h1>Map Projections: Pseudocynlindrical Projections</h1>
-<div class="figure">
-<img src="files/robinson_projection.jpg" alt="" />
-<p class="caption">Robinson Projection</p>
+<h1>Map Projections: Pseudocylindrical Projections</h1>
+<ul>
+<li>The main advantage of pseudocylindrical projections is that they
+provide a more balanced view of the earth by representing both the
+equatorial and polar regions with less distortion than standard
+cylindrical projections, while the disadvantage is that they do not
+maintain true scale or area consistently across the map.</li>
+<li>Pseudocylindrical projections are commonly used for world maps that
+aim to present a visually pleasing representation of the Earth,
+balancing the distortion of land areas and angles to provide a
+compromise between the shape and scale of global features.</li>
+</ul>
+</div>
+<div id="map-projections-pseudocylindrical-projections-1"
+class="slide section level2">
+<h1>Map Projections: Pseudocylindrical Projections</h1>
+<div class="float">
+<img src="files/robinson_projection.jpg" alt="Robinson Projection" />
+<div class="figcaption">Robinson Projection</div>
 </div>
 <!-- Aids visualization; distorts nearer the poles -->
 <p>Source: <a
@@ -112,9 +289,23 @@ Robinson Projection</a></p>
 <div id="map-projections-conic-projections"
 class="slide section level2">
 <h1>Map Projections: Conic Projections</h1>
-<div class="figure">
-<img src="files/lambert.jpg" alt="" />
-<p class="caption">Lambert Conformal Conic Projection</p>
+<ul>
+<li>The main advantage of conic projections is their ability to
+accurately represent the shape and area of landmasses in mid-latitude
+regions, while a significant disadvantage is the distortion of landforms
+and distances in the equatorial and polar regions.</li>
+<li>Conic projections are primarily used for mapping mid-latitude
+regions such as individual countries or smaller continents, where
+accurate representation of areas and distances is important, such as in
+road atlases and agricultural planning.</li>
+</ul>
+</div>
+<div id="map-projections-conic-projections-1"
+class="slide section level2">
+<h1>Map Projections: Conic Projections</h1>
+<div class="float">
+<img src="files/lambert.jpg" alt="Lambert Conformal Conic Projection" />
+<div class="figcaption">Lambert Conformal Conic Projection</div>
 </div>
 <p>Source: <a
 href="https://en.wikipedia.org/wiki/Lambert_conformal_conic_projection">Wikipedia:
@@ -124,9 +315,23 @@ Lambert Conformal Conic Projection</a></p>
 <div id="map-projections-azimuthal-projections"
 class="slide section level2">
 <h1>Map Projections: Azimuthal Projections</h1>
-<div class="figure">
-<img src="files/gpp.jpg" alt="" />
-<p class="caption">General Perspective Projection</p>
+<ul>
+<li>The main advantage of Azimuthal projections is that they display the
+Earth’s surface radially onto a plane and are often used for polar
+regions, as they accurately represent distances and directions from the
+center point.</li>
+<li>Azimuthal projections are primarily used for mapping polar regions
+to accurately represent distances and directions from a central point,
+making them particularly useful for flight planning, satellite
+communication, and polar research.</li>
+</ul>
+</div>
+<div id="map-projections-azimuthal-projections-1"
+class="slide section level2">
+<h1>Map Projections: Azimuthal Projections</h1>
+<div class="float">
+<img src="files/gpp.jpg" alt="General Perspective Projection" />
+<div class="figcaption">General Perspective Projection</div>
 </div>
 <p>Source: <a
 href="https://en.wikipedia.org/wiki/General_Perspective_projection">Wikipedia:
@@ -142,87 +347,137 @@ environment.</p>
 </div>
 <div id="spatial-memory-recall-exercise" class="slide section level2">
 <h1>Spatial Memory Recall: Exercise</h1>
-<p>Please excuse the interruption of regularly scheduled programming for
-this public service announcement..</p>
+<p>Test time!</p>
 </div>
-<div id="spatial-analysis" class="slide section level2">
-<h1>Spatial Analysis</h1>
-<p>Spatial analysis is a set of techniques used to analyze and
-understand spatial data.</p>
+<div id="spatial-analysis-techniques-methods"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Methods</h1>
+<p>Spatial analysis techniques allow us to explore, visualize, and
+analyze spatial data to identify patterns and relationships that may not
+be apparent through other forms of analysis.</p>
+<ul>
+<li>Spatial data visualization</li>
+<li>Spatial statistics</li>
+<li>Spatial modeling</li>
+<li>Spatial decision-making</li>
+<li>Remote sensing</li>
+</ul>
 </div>
-<div id="spatial-data" class="slide section level2">
-<h1>Spatial Data</h1>
+<div id="spatial-analysis-techniques-spatial-data"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Spatial Data</h1>
 <p>Spatial data refers to any data that has a geographic or spatial
 component, such as location or distance.</p>
 </div>
-<div id="spatial-analysis-techniques" class="slide section level2">
-<h1>Spatial Analysis Techniques</h1>
-<p>Spatial analysis techniques allow us to explore, visualize, and
-analyze this type of data to identify patterns and relationships that
-may not be apparent through other forms of analysis.</p>
-</div>
-<div id="common-applications" class="slide section level2">
-<h1>Common Applications</h1>
-<ul class="incremental">
-<li>Geographic Information Systems (GIS)</li>
-<li>Spatial statistics</li>
-<li>Spatial modeling</li>
-<li>Remote sensing</li>
-<li>Spatial data visualization</li>
-<li>Spatial decision-making</li>
+<div id="spatial-analysis-techniques-spatial-data-formats"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Spatial Data Formats</h1>
+<p>Some common spatial data formats:</p>
+<ul>
+<li>Shapefiles (.shp): a vector data format used in GIS software</li>
+<li>Keyhole Markup Language (.kml/.kmz): common file format used in
+applications like Google Earth</li>
+<li>GeoJSON (.geojason): a format used to encode geographic data using
+JavaScript Object Notation (JSON)</li>
+<li>TIFF/GeoTIFF (.tiff/.tif): A raster graphics image format with
+georeferencing information embedded</li>
+<li>GPS Exchange Format (.gpx): An XML format for the interchange of GPS
+data</li>
 </ul>
 </div>
-<div id="definitions-buffer-analysis" class="slide section level2">
-<h1>Definitions: Buffer Analysis</h1>
+<div id="spatial-analysis-techniques-spatial-data-types"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Spatial Data Types</h1>
+<p>Some common spatial data types:</p>
+<ul>
+<li>Vector data: represents geographic features with points, lines, and
+polygons. Points represent features like cities or houses, lines
+represent features like rivers or streets, and polygons represent areas
+like lakes or city boundaries.</li>
+<li>Raster data: represents geographic features with pixelated images or
+grids. Each pixel has a value representing information, such as
+temperature or elevation.</li>
+<li>Attribute data: non-spatial data that describes the properties of
+spatial features, often stored in tables and linked to spatial data.
+Examples include demographics, income, gross domestic product,
+population totals.</li>
+</ul>
+</div>
+<div id="spatial-analysis-techniques-gis-software"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: GIS Software</h1>
+<ul>
+<li>Geographic Information Systems (GIS)
+<ul>
+<li>QGIS: <a
+href="https://qgis.org/en/site/">https://qgis.org/en/site/</a></li>
+<li>QGIS Tutorials and Tips: <a
+href="https://qgis.org/en/site/">https://qgis.org/en/site/</a></li>
+<li>ArcGIS: <a
+href="https://www.arcgis.com/index.html">https://www.arcgis.com/index.html</a></li>
+<li>GRASS GIS: <a
+href="https://grass.osgeo.org/">https://grass.osgeo.org/</a></li>
+<li>GeoDa (spatial data science): <a
+href="https://geodacenter.github.io/">https://geodacenter.github.io/</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="spatial-analysis-techniques-buffer-analysis"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Buffer Analysis</h1>
 <p>Buffer analysis is a spatial analysis technique used to create a
 buffer zone or area around a particular feature or set of features in a
 geographic dataset. The buffer zone is typically a defined distance or
 area surrounding the feature(s), and is created by measuring a set
 distance or area around each feature.</p>
 </div>
-<div id="definitions-buffer-analysis-1" class="slide section level2">
-<h1>Definitions: Buffer Analysis</h1>
-<div class="figure">
-<img src="files/zombie.jpg" alt="" />
-<p class="caption">Buffer Analysis</p>
+<div id="spatial-analysis-techniques-buffer-analysis-1"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Buffer Analysis</h1>
+<div class="float">
+<img src="files/zombie.jpg" alt="Buffer Analysis" />
+<div class="figcaption">Buffer Analysis</div>
 </div>
 <p>Source: <a
 href="https://www.esri.com/about/newsroom/arcuser/the-undead-liven-up-the-classroom/">ESRI.com</a></p>
 </div>
-<div id="definitions-spatial-query" class="slide section level2">
-<h1>Definitions: Spatial Query</h1>
-<p>A spatial query is a type of query used in geographic information
-systems (GIS) to select features or objects in a spatial dataset that
-meet certain spatial criteria. Spatial queries can be used to identify
-features that intersect, overlap, or are within a certain distance of
-other features in the dataset.</p>
-</div>
-<div id="definitions-hotspot-analysis" class="slide section level2">
-<h1>Definitions: Hotspot Analysis</h1>
+<div id="spatial-analysis-techniques-hotspot-analysis"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Hotspot Analysis</h1>
 <p>Hotspot analysis is a spatial analysis technique used to identify
 areas of a dataset that have a statistically significant higher or lower
 frequency of a particular feature or event than would be expected by
 chance. It is used to identify spatial patterns or clusters of features
 within a dataset.</p>
 </div>
-<div id="definitions-hotspot-analysis-1" class="slide section level2">
-<h1>Definitions: Hotspot Analysis</h1>
-<div class="figure">
-<img src="files/BeerHeatMap.JPG" alt="" />
-<p class="caption">Hotspot Analysis</p>
+<div id="spatial-analysis-techniques-hotspot-analysis-1"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Hotspot Analysis</h1>
+<div class="float">
+<img src="files/BeerHeatMap.JPG" alt="Hotspot Analysis" />
+<div class="figcaption">Hotspot Analysis</div>
 </div>
 <p>Source: <a
 href="https://www.outalivepodcast.com/the-blog/gis-tool-hot-spot-analysis">OutAlivePodcast</a></p>
 </div>
+<div id="spatial-analysis-techniques-spatial-query"
+class="slide section level2">
+<h1>Spatial Analysis Techniques: Spatial Query</h1>
+<p>A spatial query is a type of query used in geographic information
+systems (GIS) to select features or objects in a spatial dataset that
+meet certain spatial criteria. Spatial queries can be used to identify
+features that intersect, overlap, or are within a certain distance of
+other features in the dataset.</p>
+</div>
 <div id="spatial-analysis-techniques-gis-demonstration"
 class="slide section level2">
 <h1>Spatial Analysis Techniques: GIS Demonstration</h1>
-<ul class="incremental">
+<ul>
 <li>GIS software (such as ArcGIS or QGIS)</li>
 <li>Data for a city (such as roads, buildings, and other infrastructure)
-<ul class="incremental">
+<ul>
 <li>GIS files needed
-<ul class="incremental">
+<ul>
 <li><strong>Vector data layer:</strong> This is the layer that contains
 the features you want to buffer, such as roads, buildings, or points of
 interest. The vector data layer should be in a file format that is
@@ -235,9 +490,17 @@ size, and location.</li>
 </ul></li>
 <li>Data: <a href="https://www.naturalearthdata.com/">Natural
 Earth</a></li>
+<li>Data: <a
+href="https://www.lexingtonky.gov/departments/geographic-information-services">Lexington
+Geographic Information Services</a></li>
+<li>Data: <a href="https://data.gov">data.gov</a></li>
+<li>Data: <a href="https://gishub.uky.edu/pages/data">UKY GIS</a></li>
+<li>Data: <a
+href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">TIGER/Line
+Shapefiles</a></li>
 </ul></li>
-<li>Spatial analysis tools (such as buffer analysis, spatial query, or
-hotspot analysis)</li>
+<li>Spatial analysis techniques (such as buffer analysis, spatial query,
+or hotspot analysis)</li>
 </ul>
 </div>
 <div id="educational-paths" class="slide section level2">
@@ -251,12 +514,13 @@ department in the College of Arts and Sciences.</p>
 class="slide section level2">
 <h1>Outline of Spatial Analysis Talk</h1>
 <p>In this talk, we discussed:</p>
-<ul class="incremental">
-<li>maps and map components</li>
-<li>spatial memory recall and its importance in daily life</li>
-<li>spatial analysis techniques and their applications</li>
-<li>spatial analysis using GIS spatial analysis</li>
-<li>GIS demonstration</li>
+<ul>
+<li>Spatial analysis research topics</li>
+<li>Maps components</li>
+<li>Map projects</li>
+<li>Spatial memory recall</li>
+<li>Spatial analysis: Techniques and their applications</li>
+<li>GIS spatial analysis: Demonstration</li>
 </ul>
 </div>
 </body>
