@@ -379,7 +379,6 @@ These are provided by the Geography department in the College of Arts and Scienc
     - 38.889484	-77.035278
     - 38.624691	-90.184776
     - 40.689247	-74.044502
-    - 41.7325 N, 49.9469 W
     - 35.296389, 10.706944
     - 36°03'19"N 112°07'19"W
 - How does the goegraphy of the area influence the location of the landmark?
