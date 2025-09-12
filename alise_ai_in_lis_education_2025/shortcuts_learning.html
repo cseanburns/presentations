@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title> </title>
+<style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 42em;
+      padding-top: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    } 
+
+
+/** Change border color to black **/
+.table>thead>tr>th {
+  border-color: black;
+}
+
+
+/** Remove borders within the table body **/
+.table>tbody>tr>td {
+  border: none;
+}
+
+
+/** Add a top border to the table header row **/
+.table thead tr:first-child { 
+  border-top: 2px solid black;
+}
+
+
+/** Add a bottom border to the table body **/
+.table tbody tr:last-child {
+  border-bottom: 2px solid black;
+}
+
+
+/** Make the table header row a normal weight; not bold **/
+.table th{
+  font-weight: normal;
+}
+
+
+/** Make the caption italic and black **/
+.table caption{
+  font-style: italic;
+  color: black;
+}
+</style>
+
+</head>
+<body>
+
+    
+    
+    <!--  -->
+
+    
+    
+        
+    <p>Keywords:
+        </p>
+
+      <hr>
+
+  <h1 id="shortcuts-learning-and-the-sacredness-of-writing">Shortcuts,
+  Learning, and the Sacredness of Writing</h1>
+  <h2 id="slide-1">Slide 1</h2>
+  <ul>
+  <li>If learning is a process <span class="citation"
+  data-cites="UZZEVEKD 7XHFGUHA">(Kapur, 2014; Stanovich &amp; West,
+  2000)</span> rather than a product,</li>
+  <li>And processes require active engagement <span class="citation"
+  data-cites="GLEP4G4M">(David et al., 2024)</span>, which we are averse
+  to (the “law of less work” <span class="citation"
+  data-cites="63ZAD45Z">(Kool et al., 2010)</span>),</li>
+  <li>Then shortcuts (heuristics, cheating, etc) undermine
+  learning.</li>
+  </ul>
+  <h2 id="slide-2">Slide 2</h2>
+  <ul>
+  <li>If educators reward the product (summative) more than the process
+  (formative) <span class="citation" data-cites="9PYM9XF3">(Edwards,
+  2022)</span>,
+  <ul>
+  <li>(see also, learning versus performance <span class="citation"
+  data-cites="6IQN57ZT">(Bjork &amp; Bjork, 2011)</span>)</li>
+  </ul></li>
+  <li>And students respond rationally to rewards,</li>
+  <li>Then shortcuts like LLM use become rational strategies
+  <ul>
+  <li>(see also, “mental effort is a limited resource” <span
+  class="citation" data-cites="GLEP4G4M">(David et al.,
+  2024)</span>).</li>
+  </ul></li>
+  </ul>
+  <h2 id="slide-3">Slide 3</h2>
+  <ul>
+  <li>If we center some cognitive practices, like writing, that foster
+  learning <span class="citation"
+  data-cites="SAG7G6F7 8FKUB2PU">(Anderson et al., 2017; Zinsser,
+  1988)</span>,</li>
+  <li>And other cognitive practices that foster learning (e.g.,
+  transcription, calculation) are outsourced to machines (CAQDAS,
+  statistical software, etc),</li>
+  <li>Then what we hold sacred for learning is a cultural choice, not an
+  intrinsic necessity.</li>
+  </ul>
+  <h2 id="slide-4">Slide 4</h2>
+  <ul>
+  <li>If we are inconsistent in which cognitive practices we hold
+  sacred,</li>
+  <li>And technology continues to automate more of them,</li>
+  <li>Then the real question is not <em>whether</em> shortcuts are
+  acceptable,
+  <ul>
+  <li>because we have willingly delegated some to machines
+  (transcription, calculation),</li>
+  <li>but <em>who decides what counts as sacred in your
+  classroom?</em></li>
+  </ul></li>
+  </ul>
+  <h2 class="unnumbered" id="references">References</h2>
+  <div id="refs" class="references csl-bib-body hanging-indent"
+  data-entry-spacing="0" data-line-spacing="2" role="list">
+  <div id="ref-8FKUB2PU" class="csl-entry" role="listitem">
+  Anderson, P., Anson, C. M., Fish, T., Gonyea, R. M., Marshall, M.,
+  Menefee-Libey, W., Paine, C., Blake, L. P., &amp; Weaver, S. (2017).
+  How writing contributes to learning: New findings from a national
+  study and their local application. <em>Peer Review</em>,
+  <em>19</em>(1), 4–8. <a
+  href="https://www.aacu.org/publications-archive/peer-review">https://www.aacu.org/publications-archive/peer-review</a>
+  </div>
+  <div id="ref-6IQN57ZT" class="csl-entry" role="listitem">
+  Bjork, E. L., &amp; Bjork, R. A. (2011). Making things hard on
+  yourself, but in a good way: Creating desirable difficulties to
+  enhance learning. <em>Psychology and the Real World: Essays
+  Illustrating Fundamental Contributions to Society</em>,
+  <em>2</em>(59-68), 56–64. <a
+  href="https://www.responsetorisk.org/s/20190109-Bjork.pdf">https://www.responsetorisk.org/s/20190109-Bjork.pdf</a>
+  </div>
+  <div id="ref-GLEP4G4M" class="csl-entry" role="listitem">
+  David, L., Eliana, V., &amp; Bijleveld, E. (2024). The unpleasantness
+  of thinking: A meta-analytic review of the association between mental
+  effort and negative affect. <em>Psychological Bulletin</em>,
+  <em>150</em>(9), 1070–1093. <a
+  href="https://doi.org/10.1037/bul0000443">https://doi.org/10.1037/bul0000443</a>
+  </div>
+  <div id="ref-9PYM9XF3" class="csl-entry" role="listitem">
+  Edwards, S. (2022). One and done, or a bundle and stumble? An
+  exploration of assessment methods in undergraduate science curricula.
+  <em>Acta Educationis Generalis</em>, <em>12</em>(3), 47–61. <a
+  href="https://doi.org/10.2478/atd-2022-0023">https://doi.org/10.2478/atd-2022-0023</a>
+  </div>
+  <div id="ref-7XHFGUHA" class="csl-entry" role="listitem">
+  Kapur, M. (2014). Productive Failure in Learning Math. <em>Cognitive
+  Science</em>, <em>38</em>(5), 1008–1022. <a
+  href="https://doi.org/10.1111/cogs.12107">https://doi.org/10.1111/cogs.12107</a>
+  </div>
+  <div id="ref-63ZAD45Z" class="csl-entry" role="listitem">
+  Kool, W., McGuire, J. T., Rosen, Z. B., &amp; Botvinick, M. M. (2010).
+  Decision Making and the Avoidance of Cognitive Demand. <em>Journal of
+  Experimental Psychology. General</em>, <em>139</em>(4), 665–682. <a
+  href="https://doi.org/10.1037/a0020198">https://doi.org/10.1037/a0020198</a>
+  </div>
+  <div id="ref-UZZEVEKD" class="csl-entry" role="listitem">
+  Stanovich, K. E., &amp; West, R. F. (2000). Individual differences in
+  reasoning: Implications for the rationality debate? <em>Behavioral and
+  Brain Sciences</em>, <em>23</em>(5), 645–665. <a
+  href="https://doi.org/10.1017/S0140525X00003435">https://doi.org/10.1017/S0140525X00003435</a>
+  </div>
+  <div id="ref-SAG7G6F7" class="csl-entry" role="listitem">
+  Zinsser, W. (1988). <em>Writing to learn</em> (1st ed). Harper &amp;
+  Row.
+  </div>
+  </div>
+
+</body>
+</html>
